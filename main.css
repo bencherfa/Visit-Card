@@ -1,195 +1,99 @@
-html,
+/* Basic Reset */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: Arial, sans-serif;
+}
+
+/* Card Styles */
 body {
-  height: 100%;
-  width: 100%;
-  margin: 0;
-  justify-content: center;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+    background-color: #f2f2f2;
 }
 
-section {
-	display: block;
-	padding-left: 0.5rem;
-	padding-right: 0.5rem;
-	height: auto;
+.card {
+    width: 100%;
+    max-width: 400px;
+    border-radius: 8px;
+    overflow: hidden;
+    background-color: #fff;
+    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
+    text-align: center;
 }
 
-p {
-	margin: 0.25rem !important;
+.card-header {
+    background-color: #007bff;
+    padding: 1rem;
 }
 
-a {
-	text-decoration: none;
-}
-
-img {
-	display: block;
-    margin-left: auto;
-    margin-right: auto;
-    max-height: 100%;
-    max-width: 100%;
+.logo {
+    width: 80px;
     height: auto;
-    width: auto;
-    object-fit: contain;
+    display: block;
+    margin: 0 auto;
 }
 
-img.profile-pic {
-	height: 30%;
-	width: 30%;
-	object-fit: cover;
-	border-radius: 50%;
+.card-content {
+    padding: 1.5rem;
 }
 
-.container {
-	margin: 0 auto;
-	position: relative;
-	height: 100%;
+.profile-pic {
+    width: 120px;
+    height: 120px;
+    border-radius: 50%;
+    border: 3px solid #007bff;
+    margin: 1rem 0;
 }
 
-.row {
-	display: flex;
-	justify-content: center;
-	align-items: center;
-	flex-wrap: nowrap;
-	flex-direction: row;
-	position: relative;
-	height: 100%;
-	width: 100%;
+.name {
+    font-size: 1.5rem;
+    color: #007bff;
+    font-weight: bold;
 }
 
-.col {
-	display: block;
-	flex-basis: 0;
-	flex-grow: 1;
-	flex-shrink: 1;
-	margin: 0;
-	padding: 0.25rem;
-	max-width: 100%;
-	max-height: 100%;
-	overflow: auto;
+.title {
+    font-size: 1rem;
+    color: #333;
+    margin-bottom: 1rem;
 }
 
-.col.is-1 {
-	flex: none;
-	width: 10%;
+.contact-info {
+    font-size: 0.9rem;
+    color: #666;
+    margin-bottom: 0.5rem;
 }
 
-.col.is-2 {
-	flex: none;
-	width: 20%;
+.contact-button {
+    display: inline-block;
+    margin-top: 1rem;
+    padding: 0.75rem 1.5rem;
+    font-size: 1rem;
+    color: #fff;
+    background-color: #007bff;
+    border: none;
+    border-radius: 4px;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
 }
 
-.col.is-3 {
-	flex: none;
-	width: 30%;
+.contact-button:hover {
+    background-color: #0056b3;
 }
 
-.col.is-4 {
-	flex: none;
-	width: 40%;
-}
-
-.col.is-5 {
-	flex: none;
-	width: 50%;
-}
-
-.col.is-6 {
-	flex: none;
-	width: 60%;
-}
-
-.col.is-7 {
-	flex: none;
-	width: 70%;
-}
-
-.col.is-8 {
-	flex: none;
-	width: 80%;
-}
-
-.col.is-9 {
-	flex: none;
-	width: 90%;
-}
-
-.col.is-10 {
-	flex: none;
-	width: 100%;
-}
-
-.name-title-company {
-	height: 100%;
-}
-
-.banner {
-	height: 30%;
-}
-
-.primary-info {
-	height: 15%;
-}
-
-.secondary-info {
-	height: 8%;
-}
-
-.bg-color-grey {
-	background-color: #F2F2F2;
-}
-
-.bg-color-white {
-	background-color: white;
-}
-
-.text-name {
-    font-family: 'Lato', sans-serif;
-    font-weight: 400;
-    color: #333333;
-    font-size: 20px;
-}
-
-.text-title-company {
-    font-family: 'Lato', sans-serif;
-    font-weight: 200;
-    color: #333333;
-    font-size: 12px;
-}
-
-.text-detail {
-    font-family: 'Lato', sans-serif;
-    font-weight: 300;
-    color: #575757;
-    font-size: 12px;
-}
-
-.bottom {
-	height: 23%;
-}
-
-.button {
-	background-color: #219653;
-	height: 48px;
-	padding-left: 24px
-	padding-right: 24px;
-	text-align: center;
-	vertical-align: middle;
-	line-height: 48px;
-	font-family: 'Muli', sans-serif;
-	color: white;
-	font-weight: 300;
-}
-
-@media screen and (max-width: 600px) {
-  img.profile-pic {
-    height: 60%;
-    width: 60%;
-  }
-}
-
-@media screen and (max-width: 480px) {
-  img.profile-pic {
-    height: 80%;
-    width: 80%;
-  }
+/* Responsive Design */
+@media (max-width: 480px) {
+    .card {
+        padding: 1rem;
+    }
+    .profile-pic {
+        width: 100px;
+        height: 100px;
+    }
+    .name {
+        font-size: 1.2rem;
+    }
 }
