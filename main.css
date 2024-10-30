@@ -1,195 +1,188 @@
-html,
-body {
-  height: 100%;
-  width: 100%;
-  margin: 0;
-  justify-content: center;
+/* Basic Reset */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: Arial, sans-serif;
+}
+
+html, body {
+    height: 100%;
+    width: 100%;
+    margin: 0;
+    display: flex;
+    justify-content: center;
 }
 
 section {
-	display: block;
-	padding-left: 0.5rem;
-	padding-right: 0.5rem;
-	height: auto;
+    display: block;
+    padding: 1rem;
+    height: auto;
+    width: 100%;
+    max-width: 1080px; /* Max width for large screens */
+    margin: auto;
 }
 
 p {
-	margin: 0.25rem !important;
+    margin: 0.5rem 0 !important;
 }
 
 a {
-	text-decoration: none;
+    text-decoration: none;
+    color: inherit;
 }
 
 img {
-	display: block;
-    margin-left: auto;
-    margin-right: auto;
-    max-height: 100%;
+    display: block;
+    margin: auto;
     max-width: 100%;
     height: auto;
-    width: auto;
     object-fit: contain;
 }
 
 img.profile-pic {
-	height: 30%;
-	width: 30%;
-	object-fit: cover;
-	border-radius: 50%;
+    width: 30%;
+    max-width: 200px;
+    object-fit: cover;
+    border-radius: 50%;
+    margin: 1rem auto;
 }
 
 .container {
-	margin: 0 auto;
-	position: relative;
-	height: 100%;
+    margin: 0 auto;
+    position: relative;
+    max-width: 1200px;
+    padding: 1rem;
 }
 
 .row {
-	display: flex;
-	justify-content: center;
-	align-items: center;
-	flex-wrap: nowrap;
-	flex-direction: row;
-	position: relative;
-	height: 100%;
-	width: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-wrap: wrap;
+    width: 100%;
 }
 
 .col {
-	display: block;
-	flex-basis: 0;
-	flex-grow: 1;
-	flex-shrink: 1;
-	margin: 0;
-	padding: 0.25rem;
-	max-width: 100%;
-	max-height: 100%;
-	overflow: auto;
-}
-
-.col.is-1 {
-	flex: none;
-	width: 10%;
-}
-
-.col.is-2 {
-	flex: none;
-	width: 20%;
-}
-
-.col.is-3 {
-	flex: none;
-	width: 30%;
-}
-
-.col.is-4 {
-	flex: none;
-	width: 40%;
-}
-
-.col.is-5 {
-	flex: none;
-	width: 50%;
+    padding: 0.5rem;
+    flex-grow: 1;
+    max-width: 100%;
 }
 
 .col.is-6 {
-	flex: none;
-	width: 60%;
-}
-
-.col.is-7 {
-	flex: none;
-	width: 70%;
-}
-
-.col.is-8 {
-	flex: none;
-	width: 80%;
-}
-
-.col.is-9 {
-	flex: none;
-	width: 90%;
-}
-
-.col.is-10 {
-	flex: none;
-	width: 100%;
+    flex-basis: 50%;
 }
 
 .name-title-company {
-	height: 100%;
+    text-align: center;
+    padding: 1rem;
 }
 
 .banner {
-	height: 30%;
+    height: 30%;
+    padding: 1rem 0;
+    background-color: #007bff;
 }
 
-.primary-info {
-	height: 15%;
-}
-
+.primary-info,
 .secondary-info {
-	height: 8%;
+    padding: 1rem 0;
+    background-color: white;
+    text-align: center;
 }
 
 .bg-color-grey {
-	background-color: #F2F2F2;
+    background-color: #F2F2F2;
 }
 
 .bg-color-white {
-	background-color: white;
+    background-color: white;
 }
 
 .text-name {
     font-family: 'Lato', sans-serif;
     font-weight: 400;
-    color: #333333;
-    font-size: 20px;
+    color: #333;
+    font-size: 1.5rem;
 }
 
 .text-title-company {
     font-family: 'Lato', sans-serif;
     font-weight: 200;
-    color: #333333;
-    font-size: 12px;
+    color: #333;
+    font-size: 1.25rem;
+    margin-top: 0.5rem;
 }
 
 .text-detail {
     font-family: 'Lato', sans-serif;
     font-weight: 300;
     color: #575757;
-    font-size: 12px;
+    font-size: 1rem;
 }
 
 .bottom {
-	height: 23%;
+    text-align: center;
+    padding: 1rem;
 }
 
 .button {
-	background-color: #219653;
-	height: 48px;
-	padding-left: 24px
-	padding-right: 24px;
-	text-align: center;
-	vertical-align: middle;
-	line-height: 48px;
-	font-family: 'Muli', sans-serif;
-	color: white;
-	font-weight: 300;
+    display: inline-block;
+    background-color: #219653;
+    color: white;
+    padding: 0.75rem 2rem;
+    border-radius: 5px;
+    font-family: 'Muli', sans-serif;
+    font-weight: 300;
+    font-size: 1rem;
+    text-align: center;
+    cursor: pointer;
+    transition: background-color 0.3s;
 }
 
+.button:hover {
+    background-color: #1a7c42;
+}
+
+/* Responsive Design for Mobile */
 @media screen and (max-width: 600px) {
-  img.profile-pic {
-    height: 60%;
-    width: 60%;
-  }
+    img.profile-pic {
+        width: 60%;
+    }
+    .text-name {
+        font-size: 1.2rem;
+    }
+    .text-title-company {
+        font-size: 1rem;
+    }
 }
 
 @media screen and (max-width: 480px) {
-  img.profile-pic {
-    height: 80%;
-    width: 80%;
-  }
+    img.profile-pic {
+        width: 80%;
+    }
+    .text-name,
+    .text-title-company {
+        font-size: 1rem;
+    }
+}
+
+/* Enhanced Layout for Large Screens */
+@media screen and (min-width: 1080px) {
+    .container {
+        max-width: 960px;
+        padding: 2rem;
+    }
+    .text-name {
+        font-size: 2rem;
+    }
+    .text-title-company {
+        font-size: 1.5rem;
+    }
+    .text-detail {
+        font-size: 1.1rem;
+    }
+    .button {
+        font-size: 1.1rem;
+    }
 }
