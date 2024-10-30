@@ -1,3 +1,13 @@
+/* Couleurs de thème */
+:root {
+  --primary-color: #007bff; /* Bleu principal */
+  --secondary-color: #f2f2f2; /* Gris clair pour les arrière-plans */
+  --text-color-dark: #333333; /* Couleur texte sombre */
+  --text-color-light: #ffffff; /* Couleur texte clair */
+  --accent-color: #ADD8E6; /* Bleu clair pour les détails */
+}
+
+/* Global Styles */
 html,
 body {
   height: 100%;
@@ -6,6 +16,7 @@ body {
   display: flex;
   justify-content: center;
   font-family: Arial, sans-serif;
+  background-color: var(--secondary-color);
 }
 
 section {
@@ -17,6 +28,7 @@ section {
 
 p {
   margin: 0.25rem !important;
+  color: var(--text-color-dark);
 }
 
 a {
@@ -40,6 +52,7 @@ img.profile-pic {
   width: 30%;
   object-fit: cover;
   border-radius: 50%;
+  border: 3px solid var(--primary-color);
 }
 
 .container {
@@ -47,7 +60,10 @@ img.profile-pic {
   position: relative;
   height: 100%;
   padding: 1rem;
-  max-width: 1080px; /* Limite la largeur pour les grands écrans */
+  max-width: 1080px;
+  background-color: var(--text-color-light);
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+  border-radius: 8px;
 }
 
 .row {
@@ -67,17 +83,6 @@ img.profile-pic {
   overflow: auto;
 }
 
-.col.is-1 { width: 10%; }
-.col.is-2 { width: 20%; }
-.col.is-3 { width: 30%; }
-.col.is-4 { width: 40%; }
-.col.is-5 { width: 50%; }
-.col.is-6 { width: 60%; }
-.col.is-7 { width: 70%; }
-.col.is-8 { width: 80%; }
-.col.is-9 { width: 90%; }
-.col.is-10 { width: 100%; }
-
 .name-title-company {
   height: auto;
   text-align: center;
@@ -85,7 +90,14 @@ img.profile-pic {
 
 .banner {
   height: 30%;
-  max-height: 250px; /* Plus grand pour les écrans larges */
+  max-height: 250px;
+  background-color: var(--primary-color);
+  color: var(--text-color-light);
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  font-size: 1.8rem;
+  font-weight: bold;
 }
 
 .primary-info, .secondary-info, .bottom {
@@ -93,57 +105,51 @@ img.profile-pic {
   text-align: center;
 }
 
-.bg-color-grey {
-  background-color: #F2F2F2;
-}
-
-.bg-color-white {
-  background-color: white;
-}
-
 .text-name {
   font-family: 'Lato', sans-serif;
-  font-weight: 400;
-  color: #333333;
-  font-size: 1.5rem; /* Plus grand par défaut */
+  font-weight: 700;
+  color: var(--primary-color);
+  font-size: 1.5rem;
 }
 
 .text-title-company {
   font-family: 'Lato', sans-serif;
-  font-weight: 200;
-  color: #333333;
+  font-weight: 300;
+  color: var(--text-color-dark);
   font-size: 1.1rem;
 }
 
 .text-detail {
   font-family: 'Lato', sans-serif;
   font-weight: 300;
-  color: #ADD8E6;
+  color: var(--accent-color);
   font-size: 1rem;
 }
 
 .button {
-  background-color: #219653;
+  background-color: var(--primary-color);
   height: 48px;
   padding: 0 24px;
   text-align: center;
   vertical-align: middle;
   line-height: 48px;
   font-family: 'Muli', sans-serif;
-  color: white;
-  font-weight: 300;
+  color: var(--text-color-light);
+  font-weight: 400;
   border-radius: 5px;
   cursor: pointer;
+  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
 }
 
 .button:hover {
-  background-color: #1e864d;
+  background-color: #0056b3; /* Bleu foncé pour effet hover */
 }
 
+/* Styles pour écrans larges (1080p et plus) */
 @media screen and (min-width: 1080px) {
   .container {
     max-width: 960px;
-    padding: 2rem; /* Plus d’espace autour */
+    padding: 2rem;
   }
 
   .text-name {
@@ -171,12 +177,13 @@ img.profile-pic {
   }
 }
 
+/* Styles pour tablettes */
 @media screen and (max-width: 768px) {
   .container {
     padding: 1rem;
   }
   .text-name {
-    font-size: 1.2rem;
+    font-size: 1.3rem;
   }
   .text-title-company,
   .text-detail {
@@ -184,13 +191,14 @@ img.profile-pic {
   }
 }
 
+/* Styles pour mobiles */
 @media screen and (max-width: 600px) {
   img.profile-pic {
     height: 60%;
     width: 60%;
   }
   .text-name {
-    font-size: 1rem;
+    font-size: 1.2rem;
   }
   .text-title-company,
   .text-detail {
@@ -209,7 +217,7 @@ img.profile-pic {
     width: 80%;
   }
   .text-name {
-    font-size: 0.9rem;
+    font-size: 1rem;
   }
   .text-title-company,
   .text-detail {
