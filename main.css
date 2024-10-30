@@ -4,21 +4,19 @@ body {
   width: 100%;
   margin: 0;
   display: flex;
-  flex-direction: column;
   justify-content: center;
-  align-items: center;
-  font-family: 'Lato', sans-serif;
+  font-family: Arial, sans-serif;
 }
 
 section {
   display: block;
   padding: 1rem;
-  max-width: 800px;
-  width: 100%;
+  height: auto;
+  max-width: 100%;
 }
 
 p {
-  margin: 0.5rem 0;
+  margin: 0.25rem !important;
 }
 
 a {
@@ -28,60 +26,71 @@ a {
 
 img {
   display: block;
-  margin: 0 auto;
+  margin-left: auto;
+  margin-right: auto;
+  max-height: 100%;
   max-width: 100%;
   height: auto;
+  width: auto;
   object-fit: contain;
 }
 
 img.profile-pic {
+  height: 30%;
   width: 30%;
-  height: auto;
   object-fit: cover;
   border-radius: 50%;
 }
 
 .container {
-  width: 100%;
-  max-width: 1200px;
+  margin: 0 auto;
+  position: relative;
+  height: 100%;
   padding: 1rem;
-  box-sizing: border-box;
+  max-width: 1080px; /* Limite la largeur pour les grands écrans */
 }
 
 .row {
   display: flex;
-  flex-wrap: wrap;
-  gap: 1rem;
   justify-content: center;
+  align-items: center;
+  flex-wrap: wrap;
   width: 100%;
 }
 
 .col {
-  flex: 1 1 100%;
-  max-width: 100%;
+  display: block;
+  flex-grow: 1;
+  flex-shrink: 1;
   padding: 0.5rem;
-  box-sizing: border-box;
+  max-width: 100%;
+  overflow: auto;
 }
 
-.col.is-1 { flex: 0 0 10%; }
-.col.is-2 { flex: 0 0 20%; }
-.col.is-3 { flex: 0 0 30%; }
-.col.is-4 { flex: 0 0 40%; }
-.col.is-5 { flex: 0 0 50%; }
-.col.is-6 { flex: 0 0 60%; }
-.col.is-7 { flex: 0 0 70%; }
-.col.is-8 { flex: 0 0 80%; }
-.col.is-9 { flex: 0 0 90%; }
-.col.is-10 { flex: 0 0 100%; }
+.col.is-1 { width: 10%; }
+.col.is-2 { width: 20%; }
+.col.is-3 { width: 30%; }
+.col.is-4 { width: 40%; }
+.col.is-5 { width: 50%; }
+.col.is-6 { width: 60%; }
+.col.is-7 { width: 70%; }
+.col.is-8 { width: 80%; }
+.col.is-9 { width: 90%; }
+.col.is-10 { width: 100%; }
 
-.name-title-company,
-.banner,
-.primary-info,
-.secondary-info,
-.bottom {
-  width: 100%;
+.name-title-company {
+  height: auto;
+  text-align: center;
+}
+
+.banner {
+  height: 30%;
+  max-height: 250px; /* Plus grand pour les écrans larges */
+}
+
+.primary-info, .secondary-info, .bottom {
   padding: 1rem;
-  box-sizing: border-box;
+  text-align: center;
 }
 
 .bg-color-grey {
@@ -96,24 +105,21 @@ img.profile-pic {
   font-family: 'Lato', sans-serif;
   font-weight: 400;
   color: #333333;
-  font-size: 24px;
-  text-align: center;
+  font-size: 1.5rem; /* Plus grand par défaut */
 }
 
 .text-title-company {
   font-family: 'Lato', sans-serif;
   font-weight: 200;
   color: #333333;
-  font-size: 14px;
-  text-align: center;
+  font-size: 1.1rem;
 }
 
 .text-detail {
   font-family: 'Lato', sans-serif;
   font-weight: 300;
   color: #ADD8E6;
-  font-size: 12px;
-  text-align: center;
+  font-size: 1rem;
 }
 
 .button {
@@ -121,48 +127,97 @@ img.profile-pic {
   height: 48px;
   padding: 0 24px;
   text-align: center;
+  vertical-align: middle;
   line-height: 48px;
   font-family: 'Muli', sans-serif;
   color: white;
   font-weight: 300;
-  display: inline-block;
-  margin: 1rem 0;
   border-radius: 5px;
+  cursor: pointer;
 }
 
-/* Responsive Styling */
-@media screen and (max-width: 768px) {
-  .col.is-6,
-  .col.is-5,
-  .col.is-4,
-  .col.is-3 {
-    flex: 1 1 100%;
-  }
+.button:hover {
+  background-color: #1e864d;
+}
 
-  img.profile-pic {
-    width: 50%;
+@media screen and (min-width: 1080px) {
+  .container {
+    max-width: 960px;
+    padding: 2rem; /* Plus d’espace autour */
   }
 
   .text-name {
-    font-size: 20px;
+    font-size: 2rem;
   }
 
   .text-title-company {
-    font-size: 12px;
+    font-size: 1.3rem;
+  }
+
+  .text-detail {
+    font-size: 1.1rem;
+  }
+
+  img.profile-pic {
+    height: 25%;
+    width: 25%;
+  }
+
+  .button {
+    height: 56px;
+    line-height: 56px;
+    padding: 0 32px;
+    font-size: 1.1rem;
+  }
+}
+
+@media screen and (max-width: 768px) {
+  .container {
+    padding: 1rem;
+  }
+  .text-name {
+    font-size: 1.2rem;
+  }
+  .text-title-company,
+  .text-detail {
+    font-size: 1rem;
+  }
+}
+
+@media screen and (max-width: 600px) {
+  img.profile-pic {
+    height: 60%;
+    width: 60%;
+  }
+  .text-name {
+    font-size: 1rem;
+  }
+  .text-title-company,
+  .text-detail {
+    font-size: 0.9rem;
+  }
+  .button {
+    height: 40px;
+    line-height: 40px;
+    padding: 0 16px;
   }
 }
 
 @media screen and (max-width: 480px) {
   img.profile-pic {
-    width: 70%;
+    height: 80%;
+    width: 80%;
   }
-
   .text-name {
-    font-size: 18px;
+    font-size: 0.9rem;
   }
-
+  .text-title-company,
+  .text-detail {
+    font-size: 0.8rem;
+  }
   .button {
-    width: 100%;
-    padding: 0;
+    height: 36px;
+    line-height: 36px;
+    padding: 0 12px;
   }
 }
