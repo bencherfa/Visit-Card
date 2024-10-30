@@ -1,231 +1,96 @@
-/* Couleurs de thème */
+/* Primary color variables */
 :root {
-  --primary-color: #007bff; /* Bleu principal */
-  --secondary-color: #f2f2f2; /* Gris clair pour les arrière-plans */
-  --text-color-dark: #333333; /* Couleur texte sombre */
-  --text-color-light: #ffffff; /* Couleur texte clair */
-  --accent-color: #ADD8E6; /* Bleu clair pour les détails */
+    --primary-color: #007bff; /* Main blue */
+    --background-light: #f2f2f2; /* Light background */
+    --text-dark: #333333;
 }
 
 /* Global Styles */
-html,
-body {
-  height: 100%;
-  width: 100%;
-  margin: 0;
-  display: flex;
-  justify-content: center;
-  font-family: Arial, sans-serif;
-  background-color: var(--secondary-color);
-}
-
-section {
-  display: block;
-  padding: 1rem;
-  height: auto;
-  max-width: 100%;
-}
-
-p {
-  margin: 0.25rem !important;
-  color: var(--text-color-dark);
-}
-
-a {
-  text-decoration: none;
-  color: inherit;
-}
-
-img {
-  display: block;
-  margin-left: auto;
-  margin-right: auto;
-  max-height: 100%;
-  max-width: 100%;
-  height: auto;
-  width: auto;
-  object-fit: contain;
-}
-
-img.profile-pic {
-  height: 30%;
-  width: 30%;
-  object-fit: cover;
-  border-radius: 50%;
-  border: 3px solid var(--primary-color);
+body, html {
+    margin: 0;
+    padding: 0;
+    display: flex;
+    justify-content: center;
+    background-color: var(--background-light);
+    font-family: Arial, sans-serif;
 }
 
 .container {
-  margin: 0 auto;
-  position: relative;
-  height: 100%;
-  padding: 1rem;
-  max-width: 1080px;
-  background-color: var(--text-color-light);
-  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
-  border-radius: 8px;
+    width: 100%;
+    max-width: 1080px;
+    padding: 1rem;
+    background-color: white;
+    border-radius: 8px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
 }
 
-.row {
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  flex-wrap: wrap;
-  width: 100%;
-}
-
-.col {
-  display: block;
-  flex-grow: 1;
-  flex-shrink: 1;
-  padding: 0.5rem;
-  max-width: 100%;
-  overflow: auto;
+.profile-pic {
+    width: 150px;
+    height: 150px;
+    border-radius: 50%;
+    border: 3px solid var(--primary-color);
+    margin: 0 auto;
+    display: block;
 }
 
 .name-title-company {
-  height: auto;
-  text-align: center;
-}
-
-.banner {
-  height: 30%;
-  max-height: 250px;
-  background-color: var(--primary-color);
-  color: var(--text-color-light);
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  font-size: 1.8rem;
-  font-weight: bold;
-}
-
-.primary-info, .secondary-info, .bottom {
-  padding: 1rem;
-  text-align: center;
+    text-align: center;
+    padding: 1rem;
 }
 
 .text-name {
-  font-family: 'Lato', sans-serif;
-  font-weight: 700;
-  color: var(--primary-color);
-  font-size: 1.5rem;
+    font-size: 2rem;
+    font-weight: 700;
+    color: var(--primary-color);
 }
 
 .text-title-company {
-  font-family: 'Lato', sans-serif;
-  font-weight: 300;
-  color: var(--text-color-dark);
-  font-size: 1.1rem;
+    font-size: 1.25rem;
+    font-weight: 400;
+    color: var(--text-dark);
 }
 
 .text-detail {
-  font-family: 'Lato', sans-serif;
-  font-weight: 300;
-  color: var(--accent-color);
-  font-size: 1rem;
+    font-size: 1rem;
+    color: var(--primary-color);
 }
 
 .button {
-  background-color: var(--primary-color);
-  height: 48px;
-  padding: 0 24px;
-  text-align: center;
-  vertical-align: middle;
-  line-height: 48px;
-  font-family: 'Muli', sans-serif;
-  color: var(--text-color-light);
-  font-weight: 400;
-  border-radius: 5px;
-  cursor: pointer;
-  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+    display: block;
+    margin: 2rem auto;
+    padding: 1rem 2rem;
+    background-color: var(--primary-color);
+    color: white;
+    font-size: 1.1rem;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
 }
 
 .button:hover {
-  background-color: #0056b3; /* Bleu foncé pour effet hover */
+    background-color: #0056b3;
 }
 
-/* Styles pour écrans larges (1080p et plus) */
-@media screen and (min-width: 1080px) {
-  .container {
-    max-width: 960px;
-    padding: 2rem;
-  }
-
-  .text-name {
-    font-size: 2rem;
-  }
-
-  .text-title-company {
-    font-size: 1.3rem;
-  }
-
-  .text-detail {
-    font-size: 1.1rem;
-  }
-
-  img.profile-pic {
-    height: 25%;
-    width: 25%;
-  }
-
-  .button {
-    height: 56px;
-    line-height: 56px;
-    padding: 0 32px;
-    font-size: 1.1rem;
-  }
+/* Responsive Styles */
+@media (min-width: 768px) {
+    .text-name {
+        font-size: 2.5rem;
+    }
+    .text-title-company {
+        font-size: 1.5rem;
+    }
 }
 
-/* Styles pour tablettes */
-@media screen and (max-width: 768px) {
-  .container {
-    padding: 1rem;
-  }
-  .text-name {
-    font-size: 1.3rem;
-  }
-  .text-title-company,
-  .text-detail {
-    font-size: 1rem;
-  }
-}
-
-/* Styles pour mobiles */
-@media screen and (max-width: 600px) {
-  img.profile-pic {
-    height: 60%;
-    width: 60%;
-  }
-  .text-name {
-    font-size: 1.2rem;
-  }
-  .text-title-company,
-  .text-detail {
-    font-size: 0.9rem;
-  }
-  .button {
-    height: 40px;
-    line-height: 40px;
-    padding: 0 16px;
-  }
-}
-
-@media screen and (max-width: 480px) {
-  img.profile-pic {
-    height: 80%;
-    width: 80%;
-  }
-  .text-name {
-    font-size: 1rem;
-  }
-  .text-title-company,
-  .text-detail {
-    font-size: 0.8rem;
-  }
-  .button {
-    height: 36px;
-    line-height: 36px;
-    padding: 0 12px;
-  }
+@media (min-width: 1080px) {
+    .container {
+        padding: 2rem;
+    }
+    .text-name {
+        font-size: 3rem;
+    }
+    .text-title-company,
+    .text-detail {
+        font-size: 1.2rem;
+    }
 }
