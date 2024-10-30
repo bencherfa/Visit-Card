@@ -6,8 +6,9 @@ FN: Cherfaoui Benacer
 ORG:Solvytech;
 TITLE:Founder, CTO
 EMAIL;type=INTERNET;type=WORK;type=pref:b.cherfaoui@solvytech.com
+TEL;TYPE=CELL:+212 642 033 127
 TEL;type=WORK;type=VOICE:+33 977 218 332
-item1.ADR;type=WORK;type=pref:;;1 Fusionopolis View\nSandcrawler\, 09-01;;;138577;Singapore
+item1.ADR;type=WORK;type=pref:Casablanca , Maroc
 item1.X-ABADR:sg
 item2.URL;type=pref:solvytech.com
 item2.X-ABLabel:_$!<HomePage>!$_
