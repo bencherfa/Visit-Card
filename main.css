@@ -130,3 +130,8 @@ body {
     margin-top: 5px;
     opacity: 0.9;
 }
+.company-logo {
+    width: 100px; /* Ajustez la taille selon vos besoins */
+    height: auto; /* Maintient le ratio d'aspect */
+    margin-top: 10px; /* Espace au-dessus du logo */
+}
