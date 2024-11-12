@@ -1,4 +1,110 @@
 <!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Cloud Services Visit Card</title>
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css" rel="stylesheet">
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+            font-family: 'Arial', sans-serif;
+        }
+
+        body {
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            min-height: 100vh;
+            background: #f0f2f5;
+        }
+
+        .card {
+            width: 400px;
+            background: white;
+            border-radius: 10px;
+            box-shadow: 0 4px 20px rgba(0, 0, 0, 0.1);
+            overflow: hidden;
+            transition: transform 0.3s ease;
+        }
+
+        .card:hover {
+            transform: translateY(-5px);
+        }
+
+        .header {
+            background: linear-gradient(135deg, #0066ff, #2c3e50);
+            padding: 20px;
+            color: white;
+            text-align: center;
+            position: relative;
+        }
+        .profile-container {
+            position: relative;
+            width: 120px;
+            height: 120px;
+            margin: 0 auto 15px;
+        }
+
+        .profile-picture {
+            width: 120px;
+            height: 120px;
+            border-radius: 50%;
+            border: 4px solid white;
+            object-fit: cover;
+            box-shadow: 0 4px 10px rgba(0, 0, 0, 0.2);
+        }
+
+        .company-name {
+            font-size: 24px;
+            font-weight: bold;
+            margin-bottom: 5px;
+        }
+
+        .tagline {
+            font-size: 14px;
+            opacity: 0.9;
+        }
+
+        .content {
+            padding: 20px;
+        }
+
+        .services {
+            margin: 15px 0;
+        }
+
+        .service-item {
+            display: flex;
+            align-items: center;
+            margin: 10px 0;
+            color: #2c3e50;
+        }
+
+        .service-item i {
+            width: 25px;
+            margin-right: 10px;
+            color: #0066ff;
+        }
+
+        .contact {
+            margin-top: 20px;
+            padding-top: 20px;
+            border-top: 1px solid #eee;
+        }
+
+        .contact-item {
+            display: flex;
+            align-items: center;
+            margin: 8px 0;
+            color: #2c3e50;
+            text-decoration: none;
+        }
+
+        .contact-item i {
+            width: 25px;
             margin-right: 10px;
             color: #0066ff;
         }
@@ -58,7 +164,7 @@
                 </div>
             </div>
             <div class="contact">
-                <a href="mailto:contact@cloudtech.com" class="contact-item">
+                <a href="mailto:b.cherfaoui@solvytech.com" class="contact-item">
                     <i class="fas fa-envelope"></i>
                     <span>b.cherfaoui@solvytech.com</span>
                 </a>
