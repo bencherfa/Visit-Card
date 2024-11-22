@@ -135,3 +135,10 @@ body {
     height: auto; /* Maintient le ratio d'aspect */
     margin-top: 10px; /* Espace au-dessus du logo */
 }
+.contact-item .fa-linkedin {
+    color: #0077b5; /* Couleur officielle de LinkedIn */
+}
+
+.contact-item:hover .fa-linkedin {
+    color: #005582; /* Couleur plus foncée au survol */
+}
