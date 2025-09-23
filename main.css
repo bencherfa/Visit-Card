@@ -19,11 +19,12 @@ body {
     border-radius: 12px;
     box-shadow: 0 8px 25px rgba(0, 0, 0, 0.1);
     overflow: hidden;
-    transition: transform 0.3s ease;
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
 }
 
 .card:hover {
     transform: translateY(-8px);
+    box-shadow: 0 12px 40px rgba(0, 0, 0, 0.15);
 }
 
 .header {
@@ -68,27 +69,6 @@ body {
     opacity: 0.8;
 }
 
-.content {
-    padding: 20px;
-}
-
-.services {
-    margin: 15px 0;
-}
-
-.service-item {
-    display: flex;
-    align-items: center;
-    margin: 12px 0;
-    color: #333;
-}
-
-.service-item i {
-    width: 25px;
-    margin-right: 12px;
-    color: #0066cc;
-}
-
 .contact {
     margin-top: 20px;
     padding-top: 20px;
@@ -101,6 +81,11 @@ body {
     margin: 10px 0;
     color: #333;
     text-decoration: none;
+    transition: all 0.3s ease;
+}
+
+.contact-item:hover {
+    color: #0066cc;
 }
 
 .contact-item i {
