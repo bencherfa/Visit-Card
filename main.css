@@ -19,12 +19,11 @@ body {
     border-radius: 12px;
     box-shadow: 0 8px 25px rgba(0, 0, 0, 0.1);
     overflow: hidden;
-    transition: transform 0.3s ease, box-shadow 0.3s ease;
+    transition: transform 0.3s ease;
 }
 
 .card:hover {
     transform: translateY(-8px);
-    box-shadow: 0 12px 40px rgba(0, 0, 0, 0.15);
 }
 
 .header {
@@ -49,6 +48,11 @@ body {
     border: 5px solid white;
     object-fit: cover;
     box-shadow: 0 4px 12px rgba(0, 0, 0, 0.2);
+    transition: transform 0.3s ease;
+}
+
+.profile-picture:hover {
+    transform: scale(1.1);
 }
 
 .company-name {
@@ -81,7 +85,7 @@ body {
     margin: 10px 0;
     color: #333;
     text-decoration: none;
-    transition: all 0.3s ease;
+    transition: color 0.3s ease;
 }
 
 .contact-item:hover {
@@ -92,6 +96,14 @@ body {
     width: 25px;
     margin-right: 12px;
     color: #0066cc;
+}
+
+.contact-item .fa-linkedin {
+    color: #0077b5;
+}
+
+.contact-item:hover .fa-linkedin {
+    color: #005582;
 }
 
 .download-button {
@@ -121,12 +133,4 @@ body {
     width: 100px;
     height: auto;
     margin-top: 10px;
-}
-
-.contact-item .fa-linkedin {
-    color: #0077b5;
-}
-
-.contact-item:hover .fa-linkedin {
-    color: #005582;
 }
