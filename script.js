@@ -8,7 +8,6 @@
  */
 
 document.addEventListener("DOMContentLoaded", () => {
-  // Elements
   const toast = document.getElementById("toast");
   const toastMessage = document.getElementById("toast-message");
   const downloadBtn = document.getElementById("download-button");
@@ -33,12 +32,17 @@ document.addEventListener("DOMContentLoaded", () => {
     if (!toast) return;
     if (toastMessage) toastMessage.textContent = msg;
 
+    toast.style.display = "flex";
+    void toast.offsetWidth; // Force DOM reflow
     toast.classList.add("show");
 
     if (toastTimer) clearTimeout(toastTimer);
 
     toastTimer = setTimeout(() => {
       toast.classList.remove("show");
+      setTimeout(() => {
+        toast.style.display = "none";
+      }, 300);
     }, duration);
   }
 
@@ -57,7 +61,6 @@ document.addEventListener("DOMContentLoaded", () => {
       }
     }
 
-    // Fallback using textarea
     try {
       const textArea = document.createElement("textarea");
       textArea.value = text;
@@ -155,6 +158,8 @@ document.addEventListener("DOMContentLoaded", () => {
   // ==========================================
   function openModal() {
     if (!qrModal) return;
+    qrModal.style.display = "flex";
+    void qrModal.offsetWidth; // Force reflow
     qrModal.classList.add("active");
     qrModal.setAttribute("aria-hidden", "false");
     document.body.style.overflow = "hidden";
@@ -165,6 +170,9 @@ document.addEventListener("DOMContentLoaded", () => {
     qrModal.classList.remove("active");
     qrModal.setAttribute("aria-hidden", "true");
     document.body.style.overflow = "";
+    setTimeout(() => {
+      qrModal.style.display = "none";
+    }, 250);
   }
 
   if (openQrBtn) openQrBtn.addEventListener("click", openModal);
@@ -210,7 +218,6 @@ document.addEventListener("DOMContentLoaded", () => {
           }
         }
       } else {
-        // Fallback to copy link
         const success = await copyToClipboard(CARD_URL);
         if (success) {
           showToast("Lien de la carte copié !");

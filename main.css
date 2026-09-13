@@ -807,27 +807,26 @@ body.light-theme .logo-light { display: block; }
    MODAL: QR CODE & SHARE
    ========================================================================== */
 .modal-backdrop {
+  display: none;
   position: fixed;
   top: 0;
   left: 0;
   width: 100vw;
   height: 100vh;
-  background: rgba(5, 8, 20, 0.8);
+  background: rgba(5, 8, 20, 0.85);
   backdrop-filter: blur(16px);
   -webkit-backdrop-filter: blur(16px);
   z-index: 2000;
-  display: flex;
   align-items: center;
   justify-content: center;
   padding: 20px;
   opacity: 0;
-  visibility: hidden;
-  transition: opacity 0.3s ease, visibility 0.3s ease;
+  transition: opacity 0.25s ease;
 }
 
 .modal-backdrop.active {
+  display: flex !important;
   opacity: 1;
-  visibility: visible;
 }
 
 .modal-card {
@@ -977,29 +976,33 @@ body.light-theme .logo-light { display: block; }
    TOAST NOTIFICATION
    ========================================================================== */
 .toast {
+  display: none;
   position: fixed;
-  top: -80px;
+  top: 24px;
   left: 50%;
   transform: translateX(-50%);
-  background: #0284C7;
   background: linear-gradient(135deg, #0A5CFF 0%, #0042B8 100%);
   color: #FFFFFF;
   padding: 12px 22px;
   border-radius: 30px;
   font-size: 13px;
   font-weight: 600;
-  display: flex;
   align-items: center;
   gap: 10px;
   box-shadow: 0 10px 25px rgba(10, 92, 255, 0.45);
-  transition: top 0.4s cubic-bezier(0.16, 1, 0.3, 1);
   z-index: 3000;
   pointer-events: none;
   white-space: nowrap;
 }
 
 .toast.show {
-  top: 24px;
+  display: flex !important;
+  animation: toastPop 0.35s cubic-bezier(0.16, 1, 0.3, 1);
+}
+
+@keyframes toastPop {
+  from { opacity: 0; transform: translate(-50%, -20px); }
+  to { opacity: 1; transform: translate(-50%, 0); }
 }
 
 .toast-icon {
