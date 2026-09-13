@@ -1,136 +1,244 @@
+:root {
+  --bg-body: #0a0e17;
+  --card-bg: #111827;
+  --card-border: rgba(255, 255, 255, 0.08);
+  --primary: #2563eb;
+  --primary-hover: #1d4ed8;
+  --accent: #38bdf8;
+  --text-main: #f9fafb;
+  --text-muted: #9ca3af;
+  --surface: rgba(255, 255, 255, 0.04);
+  --surface-hover: rgba(255, 255, 255, 0.08);
+}
+
 * {
-    margin: 0;
-    padding: 0;
-    box-sizing: border-box;
-    font-family: 'Arial', sans-serif;
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+  font-family: 'Plus Jakarta Sans', sans-serif;
 }
 
 body {
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    min-height: 100vh;
-    background: #f4f7fb;
+  min-height: 100vh;
+  background: var(--bg-body) radial-gradient(circle at 50% 0%, #1e293b 0%, #0a0e17 100%);
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  padding: 20px;
+  color: var(--text-main);
 }
 
 .card {
-    width: 380px;
-    background: white;
-    border-radius: 12px;
-    box-shadow: 0 8px 25px rgba(0, 0, 0, 0.1);
-    overflow: hidden;
-    transition: transform 0.3s ease;
+  width: 100%;
+  max-width: 400px;
+  background: var(--card-bg);
+  border: 1px solid var(--card-border);
+  border-radius: 20px;
+  overflow: hidden;
+  box-shadow: 0 20px 40px -15px rgba(0, 0, 0, 0.6);
+  position: relative;
 }
 
-.card:hover {
-    transform: translateY(-8px);
+/* Bannière supérieure */
+.header-banner {
+  height: 90px;
+  background: linear-gradient(135deg, #1e3a8a 0%, #0284c7 100%);
+  position: relative;
 }
 
-.header {
-    background: linear-gradient(135deg, #2e3c72, #4c5c8f);
-    padding: 25px;
-    color: white;
-    text-align: center;
-    position: relative;
+.card-body {
+  padding: 0 24px 28px;
+  margin-top: -50px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  text-align: center;
 }
 
-.profile-container {
-    position: relative;
-    width: 120px;
-    height: 120px;
-    margin: 0 auto 15px;
+/* Photo de profil */
+.profile-wrap {
+  width: 100px;
+  height: 100px;
+  border-radius: 50%;
+  border: 4px solid var(--card-bg);
+  overflow: hidden;
+  box-shadow: 0 8px 16px rgba(0, 0, 0, 0.3);
+  background: #1e293b;
+  margin-bottom: 12px;
 }
 
-.profile-picture {
-    width: 120px;
-    height: 120px;
-    border-radius: 50%;
-    border: 5px solid white;
-    object-fit: cover;
-    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.2);
-    transition: transform 0.3s ease;
+.profile-wrap img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
 }
 
-.profile-picture:hover {
-    transform: scale(1.1);
+.name {
+  font-size: 20px;
+  font-weight: 700;
+  color: var(--text-main);
+  letter-spacing: -0.3px;
 }
 
-.company-name {
-    font-size: 26px;
-    font-weight: bold;
-    margin-bottom: 8px;
+.role {
+  font-size: 13.5px;
+  font-weight: 600;
+  color: var(--accent);
+  margin-top: 2px;
 }
 
-.name-title {
-    font-size: 18px;
-    margin-top: 5px;
-    font-weight: normal;
-    opacity: 0.9;
+.company {
+  font-size: 13px;
+  color: var(--text-muted);
+  margin-top: 1px;
 }
 
-.tagline {
-    font-size: 14px;
-    opacity: 0.8;
+/* Badges de compétences */
+.tags-container {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 6px;
+  justify-content: center;
+  margin: 16px 0;
 }
 
-.contact {
-    margin-top: 20px;
-    padding-top: 20px;
-    border-top: 1px solid #eee;
+.tag {
+  font-size: 11px;
+  font-weight: 600;
+  background: var(--surface);
+  border: 1px solid rgba(255, 255, 255, 0.08);
+  color: #e2e8f0;
+  padding: 4px 10px;
+  border-radius: 20px;
 }
 
-.contact-item {
-    display: flex;
-    align-items: center;
-    margin: 10px 0;
-    color: #333;
-    text-decoration: none;
-    transition: color 0.3s ease;
+/* Raccourcis d'actions rapides (Quick actions) */
+.quick-actions {
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  gap: 10px;
+  width: 100%;
+  margin-bottom: 18px;
 }
 
-.contact-item:hover {
-    color: #0066cc;
+.action-btn {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 6px;
+  background: var(--surface);
+  border: 1px solid var(--card-border);
+  color: var(--text-main);
+  text-decoration: none;
+  padding: 10px 4px;
+  border-radius: 12px;
+  font-size: 11px;
+  font-weight: 500;
+  transition: all 0.2s ease;
 }
 
-.contact-item i {
-    width: 25px;
-    margin-right: 12px;
-    color: #0066cc;
+.action-btn i {
+  font-size: 16px;
+  color: var(--accent);
 }
 
-.contact-item .fa-linkedin {
-    color: #0077b5;
+.action-btn:hover {
+  background: var(--surface-hover);
+  border-color: rgba(56, 189, 248, 0.4);
+  transform: translateY(-2px);
 }
 
-.contact-item:hover .fa-linkedin {
-    color: #005582;
+/* Liste détaillée des liens */
+.link-list {
+  width: 100%;
+  display: flex;
+  flex-direction: column;
+  gap: 8px;
+  margin-bottom: 20px;
 }
 
-.download-button {
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    background: #0066cc;
-    color: white;
-    text-align: center;
-    padding: 12px;
-    margin-top: 20px;
-    border-radius: 8px;
-    text-decoration: none;
-    font-weight: bold;
-    transition: background 0.3s ease;
+.link-item {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  background: var(--surface);
+  border: 1px solid var(--card-border);
+  padding: 12px 14px;
+  border-radius: 12px;
+  text-decoration: none;
+  color: var(--text-main);
+  font-size: 13px;
+  transition: all 0.2s ease;
 }
 
-.download-button i {
-    margin-right: 12px;
+.link-left {
+  display: flex;
+  align-items: center;
+  gap: 12px;
+  overflow: hidden;
 }
 
-.download-button:hover {
-    background: #0052cc;
+.link-left i {
+  font-size: 15px;
+  width: 18px;
+  text-align: center;
+  color: var(--accent);
 }
 
-.company-logo {
-    width: 100px;
-    height: auto;
-    margin-top: 10px;
+.link-left span {
+  white-space: nowrap;
+  overflow: hidden;
+  text-overflow: ellipsis;
+  font-weight: 500;
+}
+
+.link-item .fa-chevron-right {
+  font-size: 11px;
+  color: var(--text-muted);
+}
+
+.link-item:hover {
+  background: var(--surface-hover);
+  border-color: rgba(255, 255, 255, 0.2);
+}
+
+/* Bouton vCard */
+.vcf-button {
+  width: 100%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 8px;
+  background: var(--primary);
+  color: #ffffff;
+  padding: 13px;
+  border-radius: 12px;
+  text-decoration: none;
+  font-size: 14px;
+  font-weight: 600;
+  box-shadow: 0 4px 14px rgba(37, 99, 235, 0.35);
+  transition: all 0.2s ease;
+}
+
+.vcf-button:hover {
+  background: var(--primary-hover);
+  transform: translateY(-1px);
+}
+
+/* Logo entreprise */
+.company-branding {
+  margin-top: 20px;
+  opacity: 0.65;
+  transition: opacity 0.2s;
+  display: inline-block;
+}
+
+.company-branding:hover {
+  opacity: 1;
+}
+
+.company-branding img {
+  height: 22px;
+  width: auto;
+  filter: brightness(0) invert(1);
 }
