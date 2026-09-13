@@ -3,7 +3,7 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Cherfaoui Benacer | Founder & CEO @ Solvytech</title>
+  <title>Cherfaoui Benacer | Solvytech</title>
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
   <link href="https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@400;500;600;700;800&display=swap" rel="stylesheet">
@@ -12,78 +12,92 @@
 </head>
 <body>
 
-  <div class="card">
-    <div class="header-banner"></div>
+  <!-- Toast Notification moderne (remplace l'alert) -->
+  <div id="toast" class="toast">
+    <i class="fas fa-check-circle"></i>
+    <span>Fiche contact enregistrée avec succès !</span>
+  </div>
 
-    <div class="card-body">
-      <!-- Photo Profil -->
-      <div class="profile-wrap">
-        <img src="benacer.jpg" alt="Cherfaoui Benacer">
+  <div class="card">
+    <div class="banner">
+      <div class="banner-glow"></div>
+    </div>
+
+    <div class="card-content">
+      <!-- Photo de profil avec anneau lumineux -->
+      <div class="avatar-container">
+        <div class="avatar-ring">
+          <img src="benacer.jpg" alt="Cherfaoui Benacer" class="avatar-img">
+        </div>
       </div>
 
-      <!-- Identité -->
-      <h1 class="name">Cherfaoui Benacer</h1>
-      <div class="role">Founder &amp; CEO</div>
-      <div class="company">Solvytech Solutions</div>
+      <!-- Informations d'identité -->
+      <div class="profile-header">
+        <h1 class="profile-name">Cherfaoui Benacer</h1>
+        <p class="profile-role">Founder &amp; CEO</p>
+        <p class="profile-company">Solvytech Solutions</p>
+      </div>
 
-      <!-- Badges technologiques -->
-      <div class="tags-container">
+      <!-- Badges de compétences -->
+      <div class="tags-row">
         <span class="tag">Cloud Architecture</span>
         <span class="tag">DevOps &amp; SRE</span>
         <span class="tag">ERP Integration</span>
       </div>
 
-      <!-- Raccourcis mobiles tactiles -->
+      <!-- Raccourcis d'actions rapides -->
       <div class="quick-actions">
-        <a href="tel:+212775757387" class="action-btn" title="Appeler">
-          <i class="fas fa-phone"></i>
+        <a href="tel:+212775757387" class="action-tile">
+          <div class="tile-icon"><i class="fas fa-phone"></i></div>
           <span>Appeler</span>
         </a>
-        <a href="https://wa.me/212775757387" class="action-btn" target="_blank" title="WhatsApp">
-          <i class="fab fa-whatsapp"></i>
+        <a href="https://wa.me/212775757387" class="action-tile" target="_blank">
+          <div class="tile-icon"><i class="fab fa-whatsapp"></i></div>
           <span>WhatsApp</span>
         </a>
-        <a href="mailto:b.cherfaoui@solvytech.com" class="action-btn" title="Envoyer un e-mail">
-          <i class="fas fa-envelope"></i>
+        <a href="mailto:b.cherfaoui@solvytech.com" class="action-tile">
+          <div class="tile-icon"><i class="fas fa-envelope"></i></div>
           <span>E-mail</span>
         </a>
-        <a href="https://www.linkedin.com/in/benacer-cherfaoui-614430159" class="action-btn" target="_blank" title="LinkedIn">
-          <i class="fab fa-linkedin-in"></i>
+        <a href="https://www.linkedin.com/in/benacer-cherfaoui-614430159" class="action-tile" target="_blank">
+          <div class="tile-icon"><i class="fab fa-linkedin-in"></i></div>
           <span>LinkedIn</span>
         </a>
       </div>
 
       <!-- Liens détaillés -->
-      <div class="link-list">
-        <a href="https://solvytech.com" class="link-item" target="_blank">
-          <div class="link-left">
+      <div class="links-group">
+        <a href="https://solvytech.com" class="link-tile" target="_blank">
+          <div class="link-inner">
             <i class="fas fa-globe"></i>
             <span>solvytech.com</span>
           </div>
-          <i class="fas fa-chevron-right"></i>
+          <i class="fas fa-arrow-up-right-from-square external-icon"></i>
         </a>
 
-        <a href="mailto:b.cherfaoui@solvytech.com" class="link-item">
-          <div class="link-left">
+        <a href="mailto:b.cherfaoui@solvytech.com" class="link-tile">
+          <div class="link-inner">
             <i class="fas fa-at"></i>
             <span>b.cherfaoui@solvytech.com</span>
           </div>
-          <i class="fas fa-chevron-right"></i>
+          <i class="fas fa-chevron-right chevron-icon"></i>
         </a>
       </div>
 
       <!-- Bouton vCard -->
-      <a href="Cherfaoui-Benacer.vcf" download class="vcf-button">
+      <a href="Cherfaoui-Benacer.vcf" download id="download-button" class="btn-primary">
         <i class="fas fa-user-plus"></i>
         <span>Enregistrer dans les contacts</span>
       </a>
 
-      <!-- Logo de l'entreprise -->
-      <a href="https://solvytech.com" target="_blank" class="company-branding">
-        <img src="solvytech-logo-colored.svg" alt="Solvytech Solutions">
+      <!-- Branding Solvytech en pied de carte -->
+      <a href="https://solvytech.com" target="_blank" class="footer-logo">
+        <img src="solvytech-logo-colored.svg" alt="Solvytech" onerror="this.style.display='none'; document.getElementById('logo-fallback').style.display='block';">
+        <span id="logo-fallback" class="logo-text-fallback">SolvyTech</span>
       </a>
     </div>
   </div>
 
+  <script src="script.js"></script>
 </body>
 </html>
