@@ -4,7 +4,7 @@ document.addEventListener("DOMContentLoaded", () => {
 
   if (downloadBtn) {
     downloadBtn.addEventListener("click", () => {
-      // Affichage du toast sans bloquer l'interaction
+      // Affichage fluide de la notification toast (sans alert bloquant)
       if (toast) {
         toast.classList.add("show");
         setTimeout(() => {
