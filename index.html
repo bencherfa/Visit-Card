@@ -12,26 +12,27 @@
 </head>
 <body>
 
-  <!-- Toast Notification moderne (remplace l'alert) -->
+  <!-- Toast de notification -->
   <div id="toast" class="toast">
     <i class="fas fa-check-circle"></i>
     <span>Fiche contact enregistrée avec succès !</span>
   </div>
 
   <div class="card">
+    <!-- Bannière supérieure -->
     <div class="banner">
       <div class="banner-glow"></div>
     </div>
 
     <div class="card-content">
-      <!-- Photo de profil avec anneau lumineux -->
+      <!-- Photo de profil verrouillée à 100px -->
       <div class="avatar-container">
         <div class="avatar-ring">
-          <img src="benacer.jpg" alt="Cherfaoui Benacer" class="avatar-img">
+          <img src="benacer.jpg" alt="Cherfaoui Benacer" class="avatar-img" width="100" height="100" style="width:100px; height:100px; max-width:100px; max-height:100px; object-fit:cover; border-radius:50%; display:block;">
         </div>
       </div>
 
-      <!-- Informations d'identité -->
+      <!-- Identité -->
       <div class="profile-header">
         <h1 class="profile-name">Cherfaoui Benacer</h1>
         <p class="profile-role">Founder &amp; CEO</p>
@@ -51,7 +52,7 @@
           <div class="tile-icon"><i class="fas fa-phone"></i></div>
           <span>Appeler</span>
         </a>
-        <a href="https://wa.me/212775757387" class="action-tile" target="_blank">
+        <a href="https://wa.me/212775757387" class="action-tile" target="_blank" rel="noopener">
           <div class="tile-icon"><i class="fab fa-whatsapp"></i></div>
           <span>WhatsApp</span>
         </a>
@@ -59,7 +60,7 @@
           <div class="tile-icon"><i class="fas fa-envelope"></i></div>
           <span>E-mail</span>
         </a>
-        <a href="https://www.linkedin.com/in/benacer-cherfaoui-614430159" class="action-tile" target="_blank">
+        <a href="https://www.linkedin.com/in/benacer-cherfaoui-614430159" class="action-tile" target="_blank" rel="noopener">
           <div class="tile-icon"><i class="fab fa-linkedin-in"></i></div>
           <span>LinkedIn</span>
         </a>
@@ -67,7 +68,7 @@
 
       <!-- Liens détaillés -->
       <div class="links-group">
-        <a href="https://solvytech.com" class="link-tile" target="_blank">
+        <a href="https://solvytech.com" class="link-tile" target="_blank" rel="noopener">
           <div class="link-inner">
             <i class="fas fa-globe"></i>
             <span>solvytech.com</span>
@@ -90,8 +91,8 @@
         <span>Enregistrer dans les contacts</span>
       </a>
 
-      <!-- Branding Solvytech en pied de carte -->
-      <a href="https://solvytech.com" target="_blank" class="footer-logo">
+      <!-- Branding Solvytech -->
+      <a href="https://solvytech.com" target="_blank" rel="noopener" class="footer-logo">
         <img src="solvytech-logo-colored.svg" alt="Solvytech" onerror="this.style.display='none'; document.getElementById('logo-fallback').style.display='block';">
         <span id="logo-fallback" class="logo-text-fallback">SolvyTech</span>
       </a>
