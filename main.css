@@ -1,16 +1,15 @@
 /* ==========================================================================
    SOLVYTECH — EXECUTIVE DIGITAL BUSINESS CARD STYLESHEET
    Brand Design System: Solvytech Solutions (Casablanca, Maroc)
-   Colors: #0A5CFF (Electric Blue), #0044CC (Deep Indigo), #F59E0B (Amber Gold)
+   Colors: #0A5CFF (Electric Blue), #0042B8 (Deep Indigo), #F59E0B (Amber Gold)
    Typography: Outfit (Headings) & Inter (Body)
    ========================================================================== */
 
 :root {
-  /* Solvytech Brand Identity Tokens (Dark Theme Default) */
   --font-headings: 'Outfit', -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif;
   --font-body: 'Inter', -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif;
 
-  /* Solvytech Official Palette */
+  /* Solvytech Brand Palette */
   --primary: #0A5CFF;
   --primary-hover: #0044CC;
   --primary-glow: rgba(10, 92, 255, 0.35);
@@ -18,10 +17,10 @@
   --accent-gold: #F59E0B;
   --accent-gold-glow: rgba(245, 158, 11, 0.35);
 
-  /* Dark Theme Surfaces */
+  /* Dark Theme Surfaces (Default) */
   --bg-page: #050814;
   --bg-radial: radial-gradient(circle at 50% 0%, #0d1b40 0%, #050814 75%);
-  --card-bg: rgba(12, 17, 41, 0.82);
+  --card-bg: rgba(12, 17, 41, 0.88);
   --card-border: rgba(255, 255, 255, 0.09);
   --card-border-glow: rgba(10, 92, 255, 0.35);
   --card-shadow: 0 25px 60px -15px rgba(0, 0, 0, 0.85), 0 0 45px -10px rgba(10, 92, 255, 0.28);
@@ -38,32 +37,11 @@
   --tile-hover-bg: rgba(255, 255, 255, 0.07);
   --tile-hover-border: rgba(10, 92, 255, 0.35);
 
-  /* Radius & Transitions */
   --radius-card: 26px;
   --radius-tile: 16px;
   --radius-pill: 100px;
   --transition-fast: 0.2s cubic-bezier(0.16, 1, 0.3, 1);
   --transition-smooth: 0.3s cubic-bezier(0.25, 0.8, 0.25, 1);
-}
-
-/* Light Theme Variables */
-body.light-theme {
-  --bg-page: #F3F6FC;
-  --bg-radial: radial-gradient(circle at 50% 0%, #DCE8FD 0%, #F3F6FC 75%);
-  --card-bg: rgba(255, 255, 255, 0.95);
-  --card-border: rgba(2, 21, 78, 0.09);
-  --card-border-glow: rgba(10, 92, 255, 0.2);
-  --card-shadow: 0 25px 50px -12px rgba(10, 92, 255, 0.12), 0 10px 30px rgba(0, 0, 0, 0.05);
-
-  --text-white: #0F172A;
-  --text-main: #1E293B;
-  --text-muted: #64748B;
-  --text-dim: #94A3B8;
-
-  --tile-bg: rgba(2, 21, 78, 0.025);
-  --tile-border: rgba(2, 21, 78, 0.07);
-  --tile-hover-bg: rgba(10, 92, 255, 0.06);
-  --tile-hover-border: rgba(10, 92, 255, 0.3);
 }
 
 /* Base Reset */
@@ -92,13 +70,12 @@ body {
   align-items: center;
   justify-content: center;
   padding: 24px 16px;
-  transition: background 0.4s ease, color 0.4s ease;
+  margin: 0;
   overflow-x: hidden;
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
 }
 
-/* Typography Defaults */
 h1, h2, h3, h4, h5, h6 {
   font-family: var(--font-headings);
   color: var(--text-white);
@@ -108,7 +85,7 @@ h1, h2, h3, h4, h5, h6 {
 
 a {
   color: inherit;
-  text-decoration: none;
+  text-decoration: none !important;
   transition: var(--transition-fast);
 }
 
@@ -126,18 +103,17 @@ img {
   display: block;
 }
 
-/* Page Layout */
+/* Page Layout Container */
 .page-container {
   width: 100%;
-  max-width: 430px;
+  max-width: 420px;
+  margin: auto;
   display: flex;
   justify-content: center;
   align-items: center;
 }
 
-/* ==========================================================================
-   CARD STRUCTURE & GLASSMORPHISM
-   ========================================================================== */
+/* Main Card */
 .card {
   width: 100%;
   background: var(--card-bg);
@@ -151,7 +127,6 @@ img {
   transition: transform 0.3s ease, box-shadow 0.3s ease, border-color 0.3s ease;
 }
 
-/* Subtle Glowing Light Beam at top border */
 .card::before {
   content: '';
   position: absolute;
@@ -164,18 +139,12 @@ img {
   pointer-events: none;
 }
 
-/* ==========================================================================
-   BANNER & CONTROLS
-   ========================================================================== */
+/* Banner */
 .banner {
-  height: 135px;
+  height: 130px;
   background: linear-gradient(135deg, #02113D 0%, #002D80 50%, #0A5CFF 100%);
   position: relative;
   overflow: hidden;
-}
-
-body.light-theme .banner {
-  background: linear-gradient(135deg, #0044CC 0%, #0A5CFF 60%, #38BDF8 100%);
 }
 
 .banner-grid-overlay {
@@ -216,49 +185,7 @@ body.light-theme .banner {
   opacity: 0.35;
 }
 
-/* Banner Controls: Theme Switcher & QR Code Button */
-.banner-controls {
-  position: absolute;
-  top: 14px;
-  right: 14px;
-  display: flex;
-  gap: 8px;
-  z-index: 20;
-}
-
-.control-btn {
-  width: 36px;
-  height: 36px;
-  border-radius: 50%;
-  background: rgba(12, 17, 41, 0.45);
-  backdrop-filter: blur(10px);
-  -webkit-backdrop-filter: blur(10px);
-  border: 1px solid rgba(255, 255, 255, 0.15);
-  color: #FFFFFF;
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  font-size: 14px;
-  transition: var(--transition-fast);
-}
-
-.control-btn:hover {
-  background: var(--primary);
-  border-color: var(--primary);
-  color: #FFFFFF;
-  transform: translateY(-2px);
-  box-shadow: 0 4px 12px var(--primary-glow);
-}
-
-/* Theme Toggle Icon Switching */
-.sun-icon { display: block; }
-.moon-icon { display: none; }
-body.light-theme .sun-icon { display: none; }
-body.light-theme .moon-icon { display: block; }
-
-/* ==========================================================================
-   CARD CONTENT
-   ========================================================================== */
+/* Card Core Content */
 .card-content {
   padding: 0 24px 28px;
   display: flex;
@@ -270,15 +197,18 @@ body.light-theme .moon-icon { display: block; }
 
 /* Avatar Styling */
 .avatar-wrapper {
-  margin-top: -62px;
+  margin-top: -58px;
   position: relative;
-  margin-bottom: 16px;
+  margin-bottom: 14px;
   z-index: 5;
+  display: inline-flex;
+  justify-content: center;
+  align-items: center;
 }
 
 .avatar-ring {
-  width: 114px;
-  height: 114px;
+  width: 116px;
+  height: 116px;
   border-radius: 50%;
   padding: 3.5px;
   background: linear-gradient(135deg, #0A5CFF 0%, #38BDF8 50%, #F59E0B 100%);
@@ -286,6 +216,7 @@ body.light-theme .moon-icon { display: block; }
   display: flex;
   align-items: center;
   justify-content: center;
+  overflow: hidden;
   transition: transform 0.3s ease, box-shadow 0.3s ease;
 }
 
@@ -297,14 +228,14 @@ body.light-theme .moon-icon { display: block; }
 .avatar-img {
   width: 100%;
   height: 100%;
-  border-radius: 50%;
-  object-fit: cover;
-  object-position: center 20%;
-  border: 3px solid var(--card-bg);
+  border-radius: 50% !important;
+  object-fit: cover !important;
+  object-position: center 20% !important;
+  border: 3px solid var(--card-bg) !important;
   background-color: #0c1129;
+  display: block;
 }
 
-/* Solvytech Verified Badge */
 .avatar-status-badge {
   position: absolute;
   bottom: 4px;
@@ -322,9 +253,7 @@ body.light-theme .moon-icon { display: block; }
   box-shadow: 0 2px 8px rgba(10, 92, 255, 0.5);
 }
 
-/* ==========================================================================
-   PROFILE HEADER & BADGES
-   ========================================================================== */
+/* Profile Header & Badges */
 .badge-premium {
   display: inline-flex;
   align-items: center;
@@ -358,6 +287,7 @@ body.light-theme .moon-icon { display: block; }
 
 .profile-header {
   margin-bottom: 16px;
+  text-align: center;
 }
 
 .profile-name {
@@ -384,6 +314,7 @@ body.light-theme .moon-icon { display: block; }
   font-weight: 500;
   color: var(--text-muted);
   margin-top: 2px;
+  text-decoration: none !important;
 }
 
 .profile-company:hover {
@@ -399,13 +330,13 @@ body.light-theme .moon-icon { display: block; }
   transform: translate(2px, -2px);
 }
 
-/* Expertise Tags */
+/* Tags Row */
 .tags-row {
   display: flex;
   flex-wrap: wrap;
   gap: 6px;
   justify-content: center;
-  margin-bottom: 22px;
+  margin-bottom: 20px;
 }
 
 .tag {
@@ -433,9 +364,7 @@ body.light-theme .moon-icon { display: block; }
   transform: translateY(-1px);
 }
 
-/* ==========================================================================
-   QUICK ACTIONS GRID
-   ========================================================================== */
+/* Quick Actions Grid */
 .quick-actions {
   display: grid;
   grid-template-columns: repeat(4, 1fr);
@@ -456,6 +385,7 @@ body.light-theme .moon-icon { display: block; }
   border-radius: var(--radius-tile);
   font-size: 11.5px;
   font-weight: 600;
+  text-decoration: none !important;
   transition: var(--transition-smooth);
   user-select: none;
   -webkit-tap-highlight-color: transparent;
@@ -477,7 +407,6 @@ body.light-theme .moon-icon { display: block; }
   color: var(--text-main);
 }
 
-/* Tile Specific Brand Colors */
 .tile-phone .tile-icon-box {
   background: rgba(10, 92, 255, 0.12);
   color: #0A5CFF;
@@ -522,22 +451,13 @@ body.light-theme .moon-icon { display: block; }
   box-shadow: 0 6px 16px rgba(10, 102, 194, 0.25);
 }
 
-/* ==========================================================================
-   DETAILED CONTACT & INFO SECTION
-   ========================================================================== */
+/* Detailed Coordinates Section */
 .links-group {
   width: 100%;
   display: flex;
   flex-direction: column;
   gap: 9px;
   margin-bottom: 22px;
-}
-
-.link-tile-wrapper {
-  display: flex;
-  align-items: center;
-  gap: 8px;
-  width: 100%;
 }
 
 .link-tile {
@@ -547,14 +467,11 @@ body.light-theme .moon-icon { display: block; }
   justify-content: space-between;
   background: var(--tile-bg);
   border: 1px solid var(--tile-border);
-  padding: 11px 14px;
+  padding: 12px 16px;
   border-radius: var(--radius-tile);
   color: var(--text-white);
+  text-decoration: none !important;
   transition: var(--transition-smooth);
-}
-
-.link-tile.has-copy-btn {
-  flex: 1;
 }
 
 .link-tile:hover {
@@ -571,8 +488,8 @@ body.light-theme .moon-icon { display: block; }
 }
 
 .link-icon-circle {
-  width: 36px;
-  height: 36px;
+  width: 38px;
+  height: 38px;
   border-radius: 10px;
   background: rgba(10, 92, 255, 0.1);
   border: 1px solid rgba(10, 92, 255, 0.2);
@@ -611,7 +528,7 @@ body.light-theme .moon-icon { display: block; }
 }
 
 .link-arrow-icon {
-  font-size: 12px;
+  font-size: 13px;
   color: var(--text-dim);
   transition: var(--transition-fast);
   margin-left: 8px;
@@ -622,36 +539,7 @@ body.light-theme .moon-icon { display: block; }
   transform: translateX(2px);
 }
 
-/* Copy inline button */
-.btn-copy-inline {
-  width: 44px;
-  height: 44px;
-  border-radius: var(--radius-tile);
-  background: var(--tile-bg);
-  border: 1px solid var(--tile-border);
-  color: var(--text-muted);
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  font-size: 14px;
-  flex-shrink: 0;
-  transition: var(--transition-fast);
-}
-
-.btn-copy-inline:hover {
-  background: rgba(10, 92, 255, 0.12);
-  border-color: var(--primary);
-  color: var(--primary);
-  transform: scale(1.05);
-}
-
-.btn-copy-inline.copied {
-  background: #10B981;
-  border-color: #10B981;
-  color: #FFFFFF;
-}
-
-/* Highlight Tile (Free Consultation) */
+/* Consultation Highlight */
 .link-tile-highlight {
   background: linear-gradient(135deg, rgba(10, 92, 255, 0.12) 0%, rgba(245, 158, 11, 0.08) 100%);
   border: 1px solid rgba(10, 92, 255, 0.35);
@@ -668,9 +556,7 @@ body.light-theme .moon-icon { display: block; }
   box-shadow: 0 4px 15px rgba(10, 92, 255, 0.2);
 }
 
-/* ==========================================================================
-   PRIMARY ACTION: SAVE CONTACT & SHARE
-   ========================================================================== */
+/* CTA Buttons */
 .cta-container {
   width: 100%;
   display: flex;
@@ -696,6 +582,7 @@ body.light-theme .moon-icon { display: block; }
   box-shadow: 0 6px 20px var(--primary-glow);
   position: relative;
   overflow: hidden;
+  text-decoration: none !important;
   transition: var(--transition-fast);
   cursor: pointer;
 }
@@ -747,9 +634,7 @@ body.light-theme .moon-icon { display: block; }
   transform: translateY(-1px);
 }
 
-/* ==========================================================================
-   FOOTER BRANDING
-   ========================================================================== */
+/* Footer Branding */
 .footer-brand {
   margin-top: 10px;
   display: flex;
@@ -776,11 +661,8 @@ body.light-theme .moon-icon { display: block; }
   object-fit: contain;
 }
 
-/* Switch Logo between themes */
-.logo-dark { display: block; }
-.logo-light { display: none; }
-body.light-theme .logo-dark { display: none; }
-body.light-theme .logo-light { display: block; }
+.logo-dark { display: block !important; }
+.logo-light { display: none !important; }
 
 .footer-tagline {
   font-size: 11.5px;
@@ -803,9 +685,7 @@ body.light-theme .logo-light { display: block; }
   font-size: 10px;
 }
 
-/* ==========================================================================
-   MODAL: QR CODE & SHARE
-   ========================================================================== */
+/* QR Code Modal (Defensive display: none) */
 .modal-backdrop {
   display: none;
   position: fixed;
@@ -842,8 +722,8 @@ body.light-theme .logo-light { display: block; }
   align-items: center;
   text-align: center;
   box-shadow: 0 25px 50px rgba(0, 0, 0, 0.5), 0 0 35px var(--primary-glow);
-  transform: scale(0.92);
-  transition: transform 0.3s cubic-bezier(0.16, 1, 0.3, 1);
+  transform: scale(0.94);
+  transition: transform 0.25s cubic-bezier(0.16, 1, 0.3, 1);
 }
 
 .modal-backdrop.active .modal-card {
@@ -953,7 +833,7 @@ body.light-theme .logo-light { display: block; }
 
 .btn-modal-primary {
   background: var(--primary-gradient);
-  color: #FFFFFF;
+  color: #FFFFFF !important;
 }
 
 .btn-modal-primary:hover {
@@ -972,9 +852,7 @@ body.light-theme .logo-light { display: block; }
   color: var(--primary);
 }
 
-/* ==========================================================================
-   TOAST NOTIFICATION
-   ========================================================================== */
+/* Toast Notification (Defensive display: none) */
 .toast {
   display: none;
   position: fixed;
@@ -1016,34 +894,11 @@ body.light-theme .logo-light { display: block; }
   font-size: 11px;
 }
 
-/* ==========================================================================
-   MOBILE & RESPONSIVENESS TWEAKS
-   ========================================================================== */
 @media (max-width: 400px) {
-  body {
-    padding: 16px 10px;
-  }
-
-  .card-content {
-    padding: 0 16px 22px;
-  }
-
-  .quick-actions {
-    gap: 6px;
-  }
-
-  .action-tile {
-    padding: 10px 2px;
-    font-size: 10.5px;
-  }
-
-  .tile-icon-box {
-    width: 34px;
-    height: 34px;
-    font-size: 13px;
-  }
-
-  .profile-name {
-    font-size: 21px;
-  }
+  body { padding: 16px 10px; }
+  .card-content { padding: 0 16px 22px; }
+  .quick-actions { gap: 6px; }
+  .action-tile { padding: 10px 2px; font-size: 10.5px; }
+  .tile-icon-box { width: 34px; height: 34px; font-size: 13px; }
+  .profile-name { font-size: 21px; }
 }

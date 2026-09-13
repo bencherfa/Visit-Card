@@ -6,40 +6,28 @@
   <title>Cherfaoui Benacer | Founder &amp; CEO — Solvytech</title>
   
   <!-- SEO & Social Meta Tags -->
-  <meta name="description" content="Carte de visite virtuelle de Cherfaoui Benacer, Fondateur &amp; CEO de Solvytech. Cabinet de Conseil IT, Cloud Architecture, DevOps &amp; Ingénierie Logicielle à Casablanca.">
-  <meta name="keywords" content="Cherfaoui Benacer, Solvytech, Cloud Architecture, DevOps, SRE, ERP Odoo, Casablanca, Conseil IT Maroc">
+  <meta name="description" content="Carte de visite virtuelle de Cherfaoui Benacer, Fondateur &amp; CEO de Solvytech Solutions à Casablanca. Architecture Cloud, DevOps &amp; Ingénierie Logicielle.">
   <meta name="author" content="Cherfaoui Benacer">
   <link rel="canonical" href="https://benacer.solvytech.com/">
   
-  <!-- Open Graph / Facebook / LinkedIn / WhatsApp -->
+  <!-- Open Graph -->
   <meta property="og:type" content="profile">
   <meta property="og:site_name" content="Solvytech">
   <meta property="og:title" content="Cherfaoui Benacer | Founder &amp; CEO — Solvytech">
   <meta property="og:description" content="Carte de visite virtuelle officielle — Conseil IT, Cloud, DevOps &amp; Solutions Logicielles à Casablanca.">
   <meta property="og:url" content="https://benacer.solvytech.com/">
   <meta property="og:image" content="https://benacer.solvytech.com/benacer.jpg">
-  <meta property="og:image:width" content="1205">
-  <meta property="og:image:height" content="1795">
-  <meta property="profile:first_name" content="Benacer">
-  <meta property="profile:last_name" content="Cherfaoui">
-  <meta property="profile:username" content="benacer-cherfaoui">
   
-  <!-- Twitter Card -->
-  <meta name="twitter:card" content="summary_large_image">
-  <meta name="twitter:title" content="Cherfaoui Benacer | Founder &amp; CEO — Solvytech">
-  <meta name="twitter:description" content="Carte de visite virtuelle officielle de Cherfaoui Benacer (Solvytech).">
-  <meta name="twitter:image" content="https://benacer.solvytech.com/benacer.jpg">
-
   <!-- Favicons -->
   <link rel="icon" type="image/png" sizes="32x32" href="favicon.png">
   <link rel="apple-touch-icon" href="favicon.png">
 
-  <!-- Google Fonts: Outfit (Headings) & Inter (Body) -->
+  <!-- Google Fonts: Outfit & Inter -->
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
   <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&family=Outfit:wght@500;600;700;800&display=swap" rel="stylesheet">
   
-  <!-- Font Awesome 6.5.1 Icons -->
+  <!-- Font Awesome 6.5.1 -->
   <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css">
   
   <!-- Inlined Critical Stylesheet to guarantee 100% instant rendering on GitHub Pages without cache lag -->
@@ -47,16 +35,15 @@
 /* ==========================================================================
    SOLVYTECH — EXECUTIVE DIGITAL BUSINESS CARD STYLESHEET
    Brand Design System: Solvytech Solutions (Casablanca, Maroc)
-   Colors: #0A5CFF (Electric Blue), #0044CC (Deep Indigo), #F59E0B (Amber Gold)
+   Colors: #0A5CFF (Electric Blue), #0042B8 (Deep Indigo), #F59E0B (Amber Gold)
    Typography: Outfit (Headings) & Inter (Body)
    ========================================================================== */
 
 :root {
-  /* Solvytech Brand Identity Tokens (Dark Theme Default) */
   --font-headings: 'Outfit', -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif;
   --font-body: 'Inter', -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif;
 
-  /* Solvytech Official Palette */
+  /* Solvytech Brand Palette */
   --primary: #0A5CFF;
   --primary-hover: #0044CC;
   --primary-glow: rgba(10, 92, 255, 0.35);
@@ -64,10 +51,10 @@
   --accent-gold: #F59E0B;
   --accent-gold-glow: rgba(245, 158, 11, 0.35);
 
-  /* Dark Theme Surfaces */
+  /* Dark Theme Surfaces (Default) */
   --bg-page: #050814;
   --bg-radial: radial-gradient(circle at 50% 0%, #0d1b40 0%, #050814 75%);
-  --card-bg: rgba(12, 17, 41, 0.82);
+  --card-bg: rgba(12, 17, 41, 0.88);
   --card-border: rgba(255, 255, 255, 0.09);
   --card-border-glow: rgba(10, 92, 255, 0.35);
   --card-shadow: 0 25px 60px -15px rgba(0, 0, 0, 0.85), 0 0 45px -10px rgba(10, 92, 255, 0.28);
@@ -84,32 +71,11 @@
   --tile-hover-bg: rgba(255, 255, 255, 0.07);
   --tile-hover-border: rgba(10, 92, 255, 0.35);
 
-  /* Radius & Transitions */
   --radius-card: 26px;
   --radius-tile: 16px;
   --radius-pill: 100px;
   --transition-fast: 0.2s cubic-bezier(0.16, 1, 0.3, 1);
   --transition-smooth: 0.3s cubic-bezier(0.25, 0.8, 0.25, 1);
-}
-
-/* Light Theme Variables */
-body.light-theme {
-  --bg-page: #F3F6FC;
-  --bg-radial: radial-gradient(circle at 50% 0%, #DCE8FD 0%, #F3F6FC 75%);
-  --card-bg: rgba(255, 255, 255, 0.95);
-  --card-border: rgba(2, 21, 78, 0.09);
-  --card-border-glow: rgba(10, 92, 255, 0.2);
-  --card-shadow: 0 25px 50px -12px rgba(10, 92, 255, 0.12), 0 10px 30px rgba(0, 0, 0, 0.05);
-
-  --text-white: #0F172A;
-  --text-main: #1E293B;
-  --text-muted: #64748B;
-  --text-dim: #94A3B8;
-
-  --tile-bg: rgba(2, 21, 78, 0.025);
-  --tile-border: rgba(2, 21, 78, 0.07);
-  --tile-hover-bg: rgba(10, 92, 255, 0.06);
-  --tile-hover-border: rgba(10, 92, 255, 0.3);
 }
 
 /* Base Reset */
@@ -138,13 +104,12 @@ body {
   align-items: center;
   justify-content: center;
   padding: 24px 16px;
-  transition: background 0.4s ease, color 0.4s ease;
+  margin: 0;
   overflow-x: hidden;
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
 }
 
-/* Typography Defaults */
 h1, h2, h3, h4, h5, h6 {
   font-family: var(--font-headings);
   color: var(--text-white);
@@ -154,7 +119,7 @@ h1, h2, h3, h4, h5, h6 {
 
 a {
   color: inherit;
-  text-decoration: none;
+  text-decoration: none !important;
   transition: var(--transition-fast);
 }
 
@@ -172,18 +137,17 @@ img {
   display: block;
 }
 
-/* Page Layout */
+/* Page Layout Container */
 .page-container {
   width: 100%;
-  max-width: 430px;
+  max-width: 420px;
+  margin: auto;
   display: flex;
   justify-content: center;
   align-items: center;
 }
 
-/* ==========================================================================
-   CARD STRUCTURE & GLASSMORPHISM
-   ========================================================================== */
+/* Main Card */
 .card {
   width: 100%;
   background: var(--card-bg);
@@ -197,7 +161,6 @@ img {
   transition: transform 0.3s ease, box-shadow 0.3s ease, border-color 0.3s ease;
 }
 
-/* Subtle Glowing Light Beam at top border */
 .card::before {
   content: '';
   position: absolute;
@@ -210,18 +173,12 @@ img {
   pointer-events: none;
 }
 
-/* ==========================================================================
-   BANNER & CONTROLS
-   ========================================================================== */
+/* Banner */
 .banner {
-  height: 135px;
+  height: 130px;
   background: linear-gradient(135deg, #02113D 0%, #002D80 50%, #0A5CFF 100%);
   position: relative;
   overflow: hidden;
-}
-
-body.light-theme .banner {
-  background: linear-gradient(135deg, #0044CC 0%, #0A5CFF 60%, #38BDF8 100%);
 }
 
 .banner-grid-overlay {
@@ -262,49 +219,7 @@ body.light-theme .banner {
   opacity: 0.35;
 }
 
-/* Banner Controls: Theme Switcher & QR Code Button */
-.banner-controls {
-  position: absolute;
-  top: 14px;
-  right: 14px;
-  display: flex;
-  gap: 8px;
-  z-index: 20;
-}
-
-.control-btn {
-  width: 36px;
-  height: 36px;
-  border-radius: 50%;
-  background: rgba(12, 17, 41, 0.45);
-  backdrop-filter: blur(10px);
-  -webkit-backdrop-filter: blur(10px);
-  border: 1px solid rgba(255, 255, 255, 0.15);
-  color: #FFFFFF;
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  font-size: 14px;
-  transition: var(--transition-fast);
-}
-
-.control-btn:hover {
-  background: var(--primary);
-  border-color: var(--primary);
-  color: #FFFFFF;
-  transform: translateY(-2px);
-  box-shadow: 0 4px 12px var(--primary-glow);
-}
-
-/* Theme Toggle Icon Switching */
-.sun-icon { display: block; }
-.moon-icon { display: none; }
-body.light-theme .sun-icon { display: none; }
-body.light-theme .moon-icon { display: block; }
-
-/* ==========================================================================
-   CARD CONTENT
-   ========================================================================== */
+/* Card Core Content */
 .card-content {
   padding: 0 24px 28px;
   display: flex;
@@ -316,15 +231,18 @@ body.light-theme .moon-icon { display: block; }
 
 /* Avatar Styling */
 .avatar-wrapper {
-  margin-top: -62px;
+  margin-top: -58px;
   position: relative;
-  margin-bottom: 16px;
+  margin-bottom: 14px;
   z-index: 5;
+  display: inline-flex;
+  justify-content: center;
+  align-items: center;
 }
 
 .avatar-ring {
-  width: 114px;
-  height: 114px;
+  width: 116px;
+  height: 116px;
   border-radius: 50%;
   padding: 3.5px;
   background: linear-gradient(135deg, #0A5CFF 0%, #38BDF8 50%, #F59E0B 100%);
@@ -332,6 +250,7 @@ body.light-theme .moon-icon { display: block; }
   display: flex;
   align-items: center;
   justify-content: center;
+  overflow: hidden;
   transition: transform 0.3s ease, box-shadow 0.3s ease;
 }
 
@@ -343,14 +262,14 @@ body.light-theme .moon-icon { display: block; }
 .avatar-img {
   width: 100%;
   height: 100%;
-  border-radius: 50%;
-  object-fit: cover;
-  object-position: center 20%;
-  border: 3px solid var(--card-bg);
+  border-radius: 50% !important;
+  object-fit: cover !important;
+  object-position: center 20% !important;
+  border: 3px solid var(--card-bg) !important;
   background-color: #0c1129;
+  display: block;
 }
 
-/* Solvytech Verified Badge */
 .avatar-status-badge {
   position: absolute;
   bottom: 4px;
@@ -368,9 +287,7 @@ body.light-theme .moon-icon { display: block; }
   box-shadow: 0 2px 8px rgba(10, 92, 255, 0.5);
 }
 
-/* ==========================================================================
-   PROFILE HEADER & BADGES
-   ========================================================================== */
+/* Profile Header & Badges */
 .badge-premium {
   display: inline-flex;
   align-items: center;
@@ -404,6 +321,7 @@ body.light-theme .moon-icon { display: block; }
 
 .profile-header {
   margin-bottom: 16px;
+  text-align: center;
 }
 
 .profile-name {
@@ -430,6 +348,7 @@ body.light-theme .moon-icon { display: block; }
   font-weight: 500;
   color: var(--text-muted);
   margin-top: 2px;
+  text-decoration: none !important;
 }
 
 .profile-company:hover {
@@ -445,13 +364,13 @@ body.light-theme .moon-icon { display: block; }
   transform: translate(2px, -2px);
 }
 
-/* Expertise Tags */
+/* Tags Row */
 .tags-row {
   display: flex;
   flex-wrap: wrap;
   gap: 6px;
   justify-content: center;
-  margin-bottom: 22px;
+  margin-bottom: 20px;
 }
 
 .tag {
@@ -479,9 +398,7 @@ body.light-theme .moon-icon { display: block; }
   transform: translateY(-1px);
 }
 
-/* ==========================================================================
-   QUICK ACTIONS GRID
-   ========================================================================== */
+/* Quick Actions Grid */
 .quick-actions {
   display: grid;
   grid-template-columns: repeat(4, 1fr);
@@ -502,6 +419,7 @@ body.light-theme .moon-icon { display: block; }
   border-radius: var(--radius-tile);
   font-size: 11.5px;
   font-weight: 600;
+  text-decoration: none !important;
   transition: var(--transition-smooth);
   user-select: none;
   -webkit-tap-highlight-color: transparent;
@@ -523,7 +441,6 @@ body.light-theme .moon-icon { display: block; }
   color: var(--text-main);
 }
 
-/* Tile Specific Brand Colors */
 .tile-phone .tile-icon-box {
   background: rgba(10, 92, 255, 0.12);
   color: #0A5CFF;
@@ -568,22 +485,13 @@ body.light-theme .moon-icon { display: block; }
   box-shadow: 0 6px 16px rgba(10, 102, 194, 0.25);
 }
 
-/* ==========================================================================
-   DETAILED CONTACT & INFO SECTION
-   ========================================================================== */
+/* Detailed Coordinates Section */
 .links-group {
   width: 100%;
   display: flex;
   flex-direction: column;
   gap: 9px;
   margin-bottom: 22px;
-}
-
-.link-tile-wrapper {
-  display: flex;
-  align-items: center;
-  gap: 8px;
-  width: 100%;
 }
 
 .link-tile {
@@ -593,14 +501,11 @@ body.light-theme .moon-icon { display: block; }
   justify-content: space-between;
   background: var(--tile-bg);
   border: 1px solid var(--tile-border);
-  padding: 11px 14px;
+  padding: 12px 16px;
   border-radius: var(--radius-tile);
   color: var(--text-white);
+  text-decoration: none !important;
   transition: var(--transition-smooth);
-}
-
-.link-tile.has-copy-btn {
-  flex: 1;
 }
 
 .link-tile:hover {
@@ -617,8 +522,8 @@ body.light-theme .moon-icon { display: block; }
 }
 
 .link-icon-circle {
-  width: 36px;
-  height: 36px;
+  width: 38px;
+  height: 38px;
   border-radius: 10px;
   background: rgba(10, 92, 255, 0.1);
   border: 1px solid rgba(10, 92, 255, 0.2);
@@ -657,7 +562,7 @@ body.light-theme .moon-icon { display: block; }
 }
 
 .link-arrow-icon {
-  font-size: 12px;
+  font-size: 13px;
   color: var(--text-dim);
   transition: var(--transition-fast);
   margin-left: 8px;
@@ -668,36 +573,7 @@ body.light-theme .moon-icon { display: block; }
   transform: translateX(2px);
 }
 
-/* Copy inline button */
-.btn-copy-inline {
-  width: 44px;
-  height: 44px;
-  border-radius: var(--radius-tile);
-  background: var(--tile-bg);
-  border: 1px solid var(--tile-border);
-  color: var(--text-muted);
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  font-size: 14px;
-  flex-shrink: 0;
-  transition: var(--transition-fast);
-}
-
-.btn-copy-inline:hover {
-  background: rgba(10, 92, 255, 0.12);
-  border-color: var(--primary);
-  color: var(--primary);
-  transform: scale(1.05);
-}
-
-.btn-copy-inline.copied {
-  background: #10B981;
-  border-color: #10B981;
-  color: #FFFFFF;
-}
-
-/* Highlight Tile (Free Consultation) */
+/* Consultation Highlight */
 .link-tile-highlight {
   background: linear-gradient(135deg, rgba(10, 92, 255, 0.12) 0%, rgba(245, 158, 11, 0.08) 100%);
   border: 1px solid rgba(10, 92, 255, 0.35);
@@ -714,9 +590,7 @@ body.light-theme .moon-icon { display: block; }
   box-shadow: 0 4px 15px rgba(10, 92, 255, 0.2);
 }
 
-/* ==========================================================================
-   PRIMARY ACTION: SAVE CONTACT & SHARE
-   ========================================================================== */
+/* CTA Buttons */
 .cta-container {
   width: 100%;
   display: flex;
@@ -742,6 +616,7 @@ body.light-theme .moon-icon { display: block; }
   box-shadow: 0 6px 20px var(--primary-glow);
   position: relative;
   overflow: hidden;
+  text-decoration: none !important;
   transition: var(--transition-fast);
   cursor: pointer;
 }
@@ -793,9 +668,7 @@ body.light-theme .moon-icon { display: block; }
   transform: translateY(-1px);
 }
 
-/* ==========================================================================
-   FOOTER BRANDING
-   ========================================================================== */
+/* Footer Branding */
 .footer-brand {
   margin-top: 10px;
   display: flex;
@@ -822,11 +695,8 @@ body.light-theme .moon-icon { display: block; }
   object-fit: contain;
 }
 
-/* Switch Logo between themes */
-.logo-dark { display: block; }
-.logo-light { display: none; }
-body.light-theme .logo-dark { display: none; }
-body.light-theme .logo-light { display: block; }
+.logo-dark { display: block !important; }
+.logo-light { display: none !important; }
 
 .footer-tagline {
   font-size: 11.5px;
@@ -849,9 +719,7 @@ body.light-theme .logo-light { display: block; }
   font-size: 10px;
 }
 
-/* ==========================================================================
-   MODAL: QR CODE & SHARE
-   ========================================================================== */
+/* QR Code Modal (Defensive display: none) */
 .modal-backdrop {
   display: none;
   position: fixed;
@@ -888,8 +756,8 @@ body.light-theme .logo-light { display: block; }
   align-items: center;
   text-align: center;
   box-shadow: 0 25px 50px rgba(0, 0, 0, 0.5), 0 0 35px var(--primary-glow);
-  transform: scale(0.92);
-  transition: transform 0.3s cubic-bezier(0.16, 1, 0.3, 1);
+  transform: scale(0.94);
+  transition: transform 0.25s cubic-bezier(0.16, 1, 0.3, 1);
 }
 
 .modal-backdrop.active .modal-card {
@@ -999,7 +867,7 @@ body.light-theme .logo-light { display: block; }
 
 .btn-modal-primary {
   background: var(--primary-gradient);
-  color: #FFFFFF;
+  color: #FFFFFF !important;
 }
 
 .btn-modal-primary:hover {
@@ -1018,9 +886,7 @@ body.light-theme .logo-light { display: block; }
   color: var(--primary);
 }
 
-/* ==========================================================================
-   TOAST NOTIFICATION
-   ========================================================================== */
+/* Toast Notification (Defensive display: none) */
 .toast {
   display: none;
   position: fixed;
@@ -1062,44 +928,21 @@ body.light-theme .logo-light { display: block; }
   font-size: 11px;
 }
 
-/* ==========================================================================
-   MOBILE & RESPONSIVENESS TWEAKS
-   ========================================================================== */
 @media (max-width: 400px) {
-  body {
-    padding: 16px 10px;
-  }
-
-  .card-content {
-    padding: 0 16px 22px;
-  }
-
-  .quick-actions {
-    gap: 6px;
-  }
-
-  .action-tile {
-    padding: 10px 2px;
-    font-size: 10.5px;
-  }
-
-  .tile-icon-box {
-    width: 34px;
-    height: 34px;
-    font-size: 13px;
-  }
-
-  .profile-name {
-    font-size: 21px;
-  }
+  body { padding: 16px 10px; }
+  .card-content { padding: 0 16px 22px; }
+  .quick-actions { gap: 6px; }
+  .action-tile { padding: 10px 2px; font-size: 10.5px; }
+  .tile-icon-box { width: 34px; height: 34px; font-size: 13px; }
+  .profile-name { font-size: 21px; }
 }
 
   </style>
-  <link rel="stylesheet" href="main.css?v=2.2">
+  <link rel="stylesheet" href="main.css?v=2.3">
 </head>
 <body class="dark-theme">
 
-  <!-- Notification Toast -->
+  <!-- Toast Notification (Hidden by default) -->
   <div id="toast" class="toast" style="display: none;" role="alert" aria-live="polite">
     <div class="toast-icon">
       <i class="fas fa-check"></i>
@@ -1107,7 +950,7 @@ body.light-theme .logo-light { display: block; }
     <span id="toast-message" class="toast-message">Action effectuée avec succès !</span>
   </div>
 
-  <!-- QR Code & Share Modal -->
+  <!-- QR Code Modal (Hidden by default) -->
   <div id="qr-modal" class="modal-backdrop" style="display: none;" aria-hidden="true" role="dialog" aria-labelledby="modal-title">
     <div class="modal-card">
       <button id="close-modal-btn" class="modal-close-btn" aria-label="Fermer la boîte de dialogue">
@@ -1123,9 +966,9 @@ body.light-theme .logo-light { display: block; }
       </div>
 
       <div class="modal-qr-frame">
-        <img src="qr-code.svg" alt="QR Code vers benacer.solvytech.com" class="qr-image" width="220" height="220">
+        <img src="qr-code.svg" alt="QR Code vers benacer.solvytech.com" class="qr-image" width="190" height="190">
         <div class="qr-logo-overlay">
-          <img src="favicon.png" alt="Solvytech" width="28" height="28">
+          <img src="favicon.png" alt="Solvytech" width="24" height="24">
         </div>
       </div>
 
@@ -1147,43 +990,31 @@ body.light-theme .logo-light { display: block; }
     </div>
   </div>
 
-  <!-- Main Digital Business Card -->
-  <main class="page-container">
+  <!-- Main Card Container -->
+  <div class="page-container">
     <article class="card">
-      <!-- Card Top Banner with Lighting Effects -->
+      <!-- Top Banner (Sleek Clean Banner without top buttons) -->
       <div class="banner">
         <div class="banner-grid-overlay"></div>
         <div class="banner-glow banner-glow-primary"></div>
         <div class="banner-glow banner-glow-accent"></div>
-        
-        <!-- Top Controls: Theme Switcher & QR Code Modal Opener -->
-        <div class="banner-controls">
-          <button id="theme-toggle" class="control-btn" title="Basculer le thème (Sombre / Clair)" aria-label="Changer le thème">
-            <i class="fas fa-sun sun-icon"></i>
-            <i class="fas fa-moon moon-icon"></i>
-          </button>
-          <button id="open-qr-btn" class="control-btn" title="Afficher le QR Code de partage" aria-label="Ouvrir le QR Code">
-            <i class="fas fa-qrcode"></i>
-          </button>
-        </div>
       </div>
 
-      <!-- Card Core Content -->
+      <!-- Content -->
       <div class="card-content">
-        <!-- Avatar Ring & Profile Picture -->
+        <!-- Avatar Section -->
         <div class="avatar-wrapper">
           <div class="avatar-ring">
-            <img src="benacer.jpg" alt="Photo de Cherfaoui Benacer" class="avatar-img" width="108" height="108" style="border-radius: 50% !important; object-fit: cover !important; object-position: center 20% !important; display: block;" loading="eager">
+            <img src="benacer.jpg" alt="Photo de Cherfaoui Benacer" class="avatar-img" width="116" height="116" style="border-radius: 50% !important; object-fit: cover !important; object-position: center 20% !important; display: block;" loading="eager">
           </div>
-          <!-- Verified Executive Badge -->
           <div class="avatar-status-badge" title="Fondateur Vérifié Solvytech">
             <i class="fas fa-check"></i>
           </div>
         </div>
 
-        <!-- Identity & Title -->
+        <!-- Identity -->
         <header class="profile-header">
-          <div class="badge-premium mb-2">
+          <div class="badge-premium" style="margin-bottom: 8px;">
             <span class="badge-dot"></span> Innovation &amp; Performance
           </div>
           <h1 class="profile-name">Cherfaoui Benacer</h1>
@@ -1194,7 +1025,7 @@ body.light-theme .logo-light { display: block; }
           </a>
         </header>
 
-        <!-- Expertise Tags (matching Solvytech's core services) -->
+        <!-- Expertise Tags -->
         <div class="tags-row">
           <span class="tag"><i class="fas fa-cloud"></i> Cloud Architecture</span>
           <span class="tag"><i class="fas fa-infinity"></i> DevOps &amp; SRE</span>
@@ -1202,7 +1033,7 @@ body.light-theme .logo-light { display: block; }
           <span class="tag"><i class="fas fa-code"></i> SaaS Engineering</span>
         </div>
 
-        <!-- Quick Actions Grid (Call, WhatsApp, Email, LinkedIn) -->
+        <!-- Quick Actions Grid -->
         <section class="quick-actions" aria-label="Actions rapides">
           <a href="tel:+212664949939" class="action-tile tile-phone" title="Appeler le +212 664 949 939">
             <div class="tile-icon-box">
@@ -1233,10 +1064,38 @@ body.light-theme .logo-light { display: block; }
           </a>
         </section>
 
-        <!-- Detailed Contact & Coordinates Section -->
+        <!-- Detailed Contact Coordinates (Direct Action Links without copy buttons) -->
         <section class="links-group" aria-label="Coordonnées détaillées">
+          <!-- Direct Call Mobile -->
+          <a href="tel:+212664949939" class="link-tile" title="Composer le +212 664 949 939">
+            <div class="link-left">
+              <div class="link-icon-circle">
+                <i class="fas fa-mobile-screen-button"></i>
+              </div>
+              <div class="link-text-block">
+                <span class="link-title">Ligne Directe / Mobile</span>
+                <span class="link-sub">+212 664 949 939</span>
+              </div>
+            </div>
+            <i class="fas fa-phone-flip link-arrow-icon"></i>
+          </a>
+
+          <!-- Direct Email Compose -->
+          <a href="mailto:b.cherfaoui@solvytech.com" class="link-tile" title="Envoyer un e-mail à b.cherfaoui@solvytech.com">
+            <div class="link-left">
+              <div class="link-icon-circle">
+                <i class="fas fa-envelope"></i>
+              </div>
+              <div class="link-text-block">
+                <span class="link-title">E-mail Professionnel</span>
+                <span class="link-sub">b.cherfaoui@solvytech.com</span>
+              </div>
+            </div>
+            <i class="fas fa-arrow-up-right-from-square link-arrow-icon"></i>
+          </a>
+
           <!-- Website -->
-          <a href="https://solvytech.com" class="link-tile" target="_blank" rel="noopener">
+          <a href="https://solvytech.com" class="link-tile" target="_blank" rel="noopener" title="Visiter solvytech.com">
             <div class="link-left">
               <div class="link-icon-circle">
                 <i class="fas fa-globe"></i>
@@ -1249,43 +1108,8 @@ body.light-theme .logo-light { display: block; }
             <i class="fas fa-arrow-up-right-from-square link-arrow-icon"></i>
           </a>
 
-          <!-- Email Direct with Copy Button -->
-          <div class="link-tile-wrapper">
-            <a href="mailto:b.cherfaoui@solvytech.com" class="link-tile has-copy-btn">
-              <div class="link-left">
-                <div class="link-icon-circle">
-                  <i class="fas fa-at"></i>
-                </div>
-                <div class="link-text-block">
-                  <span class="link-title">E-mail Professionnel</span>
-                  <span class="link-sub">b.cherfaoui@solvytech.com</span>
-                </div>
-              </div>
-            </a>
-            <button class="btn-copy-inline" data-copy="b.cherfaoui@solvytech.com" title="Copier l'adresse e-mail" aria-label="Copier l'e-mail">
-              <i class="fas fa-copy"></i>
-            </button>
-          </div>
-
-          <!-- Mobile Phone with Copy Button -->
-          <div class="link-tile-wrapper">
-            <a href="tel:+212664949939" class="link-tile has-copy-btn">
-              <div class="link-left">
-                <div class="link-icon-circle">
-                  <i class="fas fa-mobile-screen-button"></i>
-                </div>
-                <div class="link-text-block">
-                  <span class="link-title">Ligne Directe / Mobile</span>
-                  <span class="link-sub">+212 664 949 939</span>
-                </div>
-              </div>
-            </a>
-            <button class="btn-copy-inline" data-copy="+212664949939" title="Copier le numéro" aria-label="Copier le numéro mobile">
-              <i class="fas fa-copy"></i>
-            </button>
-          </div>
           <!-- Office Location (Casablanca) -->
-          <a href="https://maps.google.com/?q=131+Bd+d%27Anfa+Casablanca+Maroc" class="link-tile" target="_blank" rel="noopener">
+          <a href="https://maps.google.com/?q=131+Bd+d%27Anfa+Casablanca+Maroc" class="link-tile" target="_blank" rel="noopener" title="Ouvrir dans Google Maps">
             <div class="link-left">
               <div class="link-icon-circle">
                 <i class="fas fa-location-dot"></i>
@@ -1299,7 +1123,7 @@ body.light-theme .logo-light { display: block; }
           </a>
 
           <!-- Free Consultation / Schedule Meeting -->
-          <a href="https://portal.solvytech.com/prendre-rdvcontact" class="link-tile link-tile-highlight" target="_blank" rel="noopener">
+          <a href="https://portal.solvytech.com/prendre-rdvcontact" class="link-tile link-tile-highlight" target="_blank" rel="noopener" title="Planifier un rendez-vous">
             <div class="link-left">
               <div class="link-icon-circle highlight-icon">
                 <i class="fas fa-calendar-check"></i>
@@ -1313,23 +1137,22 @@ body.light-theme .logo-light { display: block; }
           </a>
         </section>
 
-        <!-- Primary Action: Save Contact (vCard) -->
+        <!-- CTA Buttons -->
         <div class="cta-container">
-          <a href="Cherfaoui-Benacer.vcf" download id="download-button" class="btn-primary btn-glow" role="button">
+          <a href="Cherfaoui-Benacer.vcf" download id="download-button" class="btn-primary" role="button" title="Télécharger le fichier contact vCard">
             <i class="fas fa-user-plus btn-icon"></i>
             <span>Enregistrer dans les contacts</span>
           </a>
 
-          <button id="btn-open-share" class="btn-secondary">
+          <button id="btn-open-share" class="btn-secondary" title="Afficher le QR Code pour partage mobile">
             <i class="fas fa-qrcode"></i>
             <span>Partager / QR Code</span>
           </button>
         </div>
 
-        <!-- Solvytech Footer Branding -->
+        <!-- Footer Branding -->
         <footer class="footer-brand">
           <a href="https://solvytech.com" target="_blank" rel="noopener" class="footer-logo-link" title="Visiter Solvytech">
-            <!-- Vector Logo: switches cleanly according to theme -->
             <img src="solvytech-logo-white.svg" alt="Solvytech" class="company-logo logo-dark" height="28">
             <img src="solvytech-logo-colored.svg" alt="Solvytech" class="company-logo logo-light" height="28" style="display: none;">
           </a>
@@ -1341,9 +1164,9 @@ body.light-theme .logo-light { display: block; }
         </footer>
       </div>
     </article>
-  </main>
+  </div>
 
-  <!-- Interactive JavaScript -->
+  <!-- Interactive Controller -->
   <script src="script.js"></script>
 </body>
 </html>
