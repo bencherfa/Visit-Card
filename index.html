@@ -2,101 +2,315 @@
 <html lang="fr">
 <head>
   <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Cherfaoui Benacer | Solvytech Solutions</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no">
+  <title>Cherfaoui Benacer | Founder &amp; CEO — Solvytech</title>
+  
+  <!-- SEO & Social Meta Tags -->
+  <meta name="description" content="Carte de visite virtuelle de Cherfaoui Benacer, Fondateur &amp; CEO de Solvytech. Cabinet de Conseil IT, Cloud Architecture, DevOps &amp; Ingénierie Logicielle à Casablanca.">
+  <meta name="keywords" content="Cherfaoui Benacer, Solvytech, Cloud Architecture, DevOps, SRE, ERP Odoo, Casablanca, Conseil IT Maroc">
+  <meta name="author" content="Cherfaoui Benacer">
+  <link rel="canonical" href="https://benacer.solvytech.com/">
+  
+  <!-- Open Graph / Facebook / LinkedIn / WhatsApp -->
+  <meta property="og:type" content="profile">
+  <meta property="og:site_name" content="Solvytech">
+  <meta property="og:title" content="Cherfaoui Benacer | Founder &amp; CEO — Solvytech">
+  <meta property="og:description" content="Carte de visite virtuelle officielle — Conseil IT, Cloud, DevOps &amp; Solutions Logicielles à Casablanca.">
+  <meta property="og:url" content="https://benacer.solvytech.com/">
+  <meta property="og:image" content="https://benacer.solvytech.com/benacer.jpg">
+  <meta property="og:image:width" content="1205">
+  <meta property="og:image:height" content="1795">
+  <meta property="profile:first_name" content="Benacer">
+  <meta property="profile:last_name" content="Cherfaoui">
+  <meta property="profile:username" content="benacer-cherfaoui">
+  
+  <!-- Twitter Card -->
+  <meta name="twitter:card" content="summary_large_image">
+  <meta name="twitter:title" content="Cherfaoui Benacer | Founder &amp; CEO — Solvytech">
+  <meta name="twitter:description" content="Carte de visite virtuelle officielle de Cherfaoui Benacer (Solvytech).">
+  <meta name="twitter:image" content="https://benacer.solvytech.com/benacer.jpg">
+
+  <!-- Favicons -->
+  <link rel="icon" type="image/png" sizes="32x32" href="favicon.png">
+  <link rel="apple-touch-icon" href="favicon.png">
+
+  <!-- Google Fonts: Outfit (Headings) & Inter (Body) -->
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-  <link href="https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@400;500;600;700;800&display=swap" rel="stylesheet">
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&family=Outfit:wght@500;600;700;800&display=swap" rel="stylesheet">
+  
+  <!-- Font Awesome 6.5.1 Icons -->
   <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css">
+  
+  <!-- Custom Stylesheet -->
   <link rel="stylesheet" href="main.css">
 </head>
-<body>
+<body class="dark-theme">
 
-  <!-- Toast Notification -->
-  <div id="toast" class="toast">
-    <i class="fas fa-check-circle"></i>
-    <span>Fiche contact enregistrée avec succès !</span>
+  <!-- Notification Toast -->
+  <div id="toast" class="toast" role="alert" aria-live="polite">
+    <div class="toast-icon">
+      <i class="fas fa-check"></i>
+    </div>
+    <span id="toast-message" class="toast-message">Action effectuée avec succès !</span>
   </div>
 
-  <div class="card">
-    <!-- Bannière avec halo -->
-    <div class="banner">
-      <div class="banner-glow"></div>
-    </div>
+  <!-- QR Code & Share Modal -->
+  <div id="qr-modal" class="modal-backdrop" aria-hidden="true" role="dialog" aria-labelledby="modal-title">
+    <div class="modal-card">
+      <button id="close-modal-btn" class="modal-close-btn" aria-label="Fermer la boîte de dialogue">
+        <i class="fas fa-times"></i>
+      </button>
 
-    <div class="card-content">
-      <!-- Photo de profil avec anneau lumineux -->
-      <div class="avatar-ring">
-        <img src="benacer.jpg" alt="Cherfaoui Benacer" class="avatar-img" width="100" height="100">
+      <div class="modal-header">
+        <span class="badge-premium mb-1">
+          <span class="badge-dot"></span> Partage instantané
+        </span>
+        <h2 id="modal-title" class="modal-title">Scanner le QR Code</h2>
+        <p class="modal-subtitle">Pointez l'appareil photo de votre smartphone pour ouvrir ma carte de visite digitale.</p>
       </div>
 
-      <!-- Identité -->
-      <div class="profile-header">
-        <h1 class="profile-name">Cherfaoui Benacer</h1>
-        <p class="profile-role">Founder &amp; CEO</p>
-        <p class="profile-company">Solvytech Solutions</p>
+      <div class="modal-qr-frame">
+        <img src="qr-code.svg" alt="QR Code vers benacer.solvytech.com" class="qr-image" width="220" height="220">
+        <div class="qr-logo-overlay">
+          <img src="favicon.png" alt="Solvytech" width="28" height="28">
+        </div>
       </div>
 
-      <!-- Badges d'expertise -->
-      <div class="tags-row">
-        <span class="tag">Cloud Architecture</span>
-        <span class="tag">DevOps &amp; SRE</span>
-        <span class="tag">ERP Integration</span>
+      <div class="modal-url-pill">
+        <i class="fas fa-link"></i>
+        <span class="url-text">benacer.solvytech.com</span>
       </div>
 
-      <!-- Raccourcis d'actions rapides -->
-      <div class="quick-actions">
-        <a href="tel:+212775757387" class="action-tile" title="Appeler">
-          <div class="tile-icon"><i class="fas fa-phone"></i></div>
-          <span>Appeler</span>
-        </a>
-        <a href="https://wa.me/212775757387" class="action-tile" target="_blank" rel="noopener" title="WhatsApp">
-          <div class="tile-icon"><i class="fab fa-whatsapp"></i></div>
-          <span>WhatsApp</span>
-        </a>
-        <a href="mailto:b.cherfaoui@solvytech.com" class="action-tile" title="Envoyer un e-mail">
-          <div class="tile-icon"><i class="fas fa-envelope"></i></div>
-          <span>E-mail</span>
-        </a>
-        <a href="https://www.linkedin.com/in/benacer-cherfaoui-614430159" class="action-tile" target="_blank" rel="noopener" title="LinkedIn">
-          <div class="tile-icon"><i class="fab fa-linkedin-in"></i></div>
-          <span>LinkedIn</span>
-        </a>
+      <div class="modal-actions">
+        <button id="btn-copy-link" class="btn-modal btn-modal-secondary">
+          <i class="fas fa-copy"></i>
+          <span>Copier le lien</span>
+        </button>
+        <button id="btn-share-native" class="btn-modal btn-modal-primary">
+          <i class="fas fa-share-nodes"></i>
+          <span>Partager</span>
+        </button>
       </div>
-
-      <!-- Liens détaillés -->
-      <div class="links-group">
-        <a href="https://solvytech.com" class="link-tile" target="_blank" rel="noopener">
-          <div class="link-inner">
-            <i class="fas fa-globe"></i>
-            <span>solvytech.com</span>
-          </div>
-          <i class="fas fa-arrow-up-right-from-square icon-sub"></i>
-        </a>
-
-        <a href="mailto:b.cherfaoui@solvytech.com" class="link-tile">
-          <div class="link-inner">
-            <i class="fas fa-at"></i>
-            <span>b.cherfaoui@solvytech.com</span>
-          </div>
-          <i class="fas fa-chevron-right icon-sub"></i>
-        </a>
-      </div>
-
-      <!-- Bouton vCard -->
-      <a href="Cherfaoui-Benacer.vcf" download id="download-button" class="btn-primary">
-        <i class="fas fa-user-plus"></i>
-        <span>Enregistrer dans les contacts</span>
-      </a>
-
-      <!-- Logo Solvytech -->
-      <a href="https://solvytech.com" target="_blank" rel="noopener" class="footer-brand">
-        <img src="solvytech-logo-colored.svg" alt="Solvytech" class="company-logo-img" height="26" onerror="this.style.display='none'; document.getElementById('logo-fallback').style.display='block';">
-        <span id="logo-fallback" class="logo-text-fallback">SolvyTech</span>
-      </a>
     </div>
   </div>
 
+  <!-- Main Digital Business Card -->
+  <main class="page-container">
+    <article class="card">
+      <!-- Card Top Banner with Lighting Effects -->
+      <div class="banner">
+        <div class="banner-grid-overlay"></div>
+        <div class="banner-glow banner-glow-primary"></div>
+        <div class="banner-glow banner-glow-accent"></div>
+        
+        <!-- Top Controls: Theme Switcher & QR Code Modal Opener -->
+        <div class="banner-controls">
+          <button id="theme-toggle" class="control-btn" title="Basculer le thème (Sombre / Clair)" aria-label="Changer le thème">
+            <i class="fas fa-sun sun-icon"></i>
+            <i class="fas fa-moon moon-icon"></i>
+          </button>
+          <button id="open-qr-btn" class="control-btn" title="Afficher le QR Code de partage" aria-label="Ouvrir le QR Code">
+            <i class="fas fa-qrcode"></i>
+          </button>
+        </div>
+      </div>
+
+      <!-- Card Core Content -->
+      <div class="card-content">
+        <!-- Avatar Ring & Profile Picture -->
+        <div class="avatar-wrapper">
+          <div class="avatar-ring">
+            <img src="benacer.jpg" alt="Photo de Cherfaoui Benacer" class="avatar-img" width="108" height="108" loading="eager">
+          </div>
+          <!-- Verified Executive Badge -->
+          <div class="avatar-status-badge" title="Fondateur Vérifié Solvytech">
+            <i class="fas fa-check"></i>
+          </div>
+        </div>
+
+        <!-- Identity & Title -->
+        <header class="profile-header">
+          <div class="badge-premium mb-2">
+            <span class="badge-dot"></span> Innovation &amp; Performance
+          </div>
+          <h1 class="profile-name">Cherfaoui Benacer</h1>
+          <p class="profile-role">Founder &amp; CEO</p>
+          <a href="https://solvytech.com" target="_blank" rel="noopener" class="profile-company" title="Visiter le site officiel Solvytech">
+            <span>Solvytech Solutions</span>
+            <i class="fas fa-arrow-up-right-from-square company-arrow"></i>
+          </a>
+        </header>
+
+        <!-- Expertise Tags (matching Solvytech's core services) -->
+        <div class="tags-row">
+          <span class="tag"><i class="fas fa-cloud"></i> Cloud Architecture</span>
+          <span class="tag"><i class="fas fa-infinity"></i> DevOps &amp; SRE</span>
+          <span class="tag"><i class="fas fa-cubes"></i> ERP Integration</span>
+          <span class="tag"><i class="fas fa-code"></i> SaaS Engineering</span>
+        </div>
+
+        <!-- Quick Actions Grid (Call, WhatsApp, Email, LinkedIn) -->
+        <section class="quick-actions" aria-label="Actions rapides">
+          <a href="tel:+212775757387" class="action-tile tile-phone" title="Appeler le +212 775 757 387">
+            <div class="tile-icon-box">
+              <i class="fas fa-phone"></i>
+            </div>
+            <span class="tile-label">Appeler</span>
+          </a>
+
+          <a href="https://wa.me/212775757387?text=Bonjour%20Benacer%2C" class="action-tile tile-whatsapp" target="_blank" rel="noopener" title="Échanger sur WhatsApp">
+            <div class="tile-icon-box">
+              <i class="fab fa-whatsapp"></i>
+            </div>
+            <span class="tile-label">WhatsApp</span>
+          </a>
+
+          <a href="mailto:b.cherfaoui@solvytech.com" class="action-tile tile-email" title="Envoyer un e-mail à b.cherfaoui@solvytech.com">
+            <div class="tile-icon-box">
+              <i class="fas fa-envelope"></i>
+            </div>
+            <span class="tile-label">E-mail</span>
+          </a>
+
+          <a href="https://www.linkedin.com/in/benacer-cherfaoui-614430159" class="action-tile tile-linkedin" target="_blank" rel="noopener" title="Consulter le profil LinkedIn">
+            <div class="tile-icon-box">
+              <i class="fab fa-linkedin-in"></i>
+            </div>
+            <span class="tile-label">LinkedIn</span>
+          </a>
+        </section>
+
+        <!-- Detailed Contact & Coordinates Section -->
+        <section class="links-group" aria-label="Coordonnées détaillées">
+          <!-- Website -->
+          <a href="https://solvytech.com" class="link-tile" target="_blank" rel="noopener">
+            <div class="link-left">
+              <div class="link-icon-circle">
+                <i class="fas fa-globe"></i>
+              </div>
+              <div class="link-text-block">
+                <span class="link-title">Site Web Officiel</span>
+                <span class="link-sub">solvytech.com</span>
+              </div>
+            </div>
+            <i class="fas fa-arrow-up-right-from-square link-arrow-icon"></i>
+          </a>
+
+          <!-- Email Direct with Copy Button -->
+          <div class="link-tile-wrapper">
+            <a href="mailto:b.cherfaoui@solvytech.com" class="link-tile has-copy-btn">
+              <div class="link-left">
+                <div class="link-icon-circle">
+                  <i class="fas fa-at"></i>
+                </div>
+                <div class="link-text-block">
+                  <span class="link-title">E-mail Professionnel</span>
+                  <span class="link-sub">b.cherfaoui@solvytech.com</span>
+                </div>
+              </div>
+            </a>
+            <button class="btn-copy-inline" data-copy="b.cherfaoui@solvytech.com" title="Copier l'adresse e-mail" aria-label="Copier l'e-mail">
+              <i class="fas fa-copy"></i>
+            </button>
+          </div>
+
+          <!-- Mobile Phone with Copy Button -->
+          <div class="link-tile-wrapper">
+            <a href="tel:+212775757387" class="link-tile has-copy-btn">
+              <div class="link-left">
+                <div class="link-icon-circle">
+                  <i class="fas fa-mobile-screen-button"></i>
+                </div>
+                <div class="link-text-block">
+                  <span class="link-title">Ligne Directe / Mobile</span>
+                  <span class="link-sub">+212 775 757 387</span>
+                </div>
+              </div>
+            </a>
+            <button class="btn-copy-inline" data-copy="+212775757387" title="Copier le numéro" aria-label="Copier le numéro mobile">
+              <i class="fas fa-copy"></i>
+            </button>
+          </div>
+
+          <!-- Work Phone -->
+          <div class="link-tile-wrapper">
+            <a href="tel:+212668565928" class="link-tile has-copy-btn">
+              <div class="link-left">
+                <div class="link-icon-circle">
+                  <i class="fas fa-phone-volume"></i>
+                </div>
+                <div class="link-text-block">
+                  <span class="link-title">Téléphone Bureau / Fixe</span>
+                  <span class="link-sub">+212 668 565 928</span>
+                </div>
+              </div>
+            </a>
+            <button class="btn-copy-inline" data-copy="+212668565928" title="Copier le numéro de bureau" aria-label="Copier le numéro de bureau">
+              <i class="fas fa-copy"></i>
+            </button>
+          </div>
+
+          <!-- Office Location (Casablanca) -->
+          <a href="https://maps.google.com/?q=131+Bd+d%27Anfa+Casablanca+Maroc" class="link-tile" target="_blank" rel="noopener">
+            <div class="link-left">
+              <div class="link-icon-circle">
+                <i class="fas fa-location-dot"></i>
+              </div>
+              <div class="link-text-block">
+                <span class="link-title">Siège Social &amp; Bureaux</span>
+                <span class="link-sub">131 Bd d'Anfa, Casablanca, Maroc</span>
+              </div>
+            </div>
+            <i class="fas fa-chevron-right link-arrow-icon"></i>
+          </a>
+
+          <!-- Free Consultation / Schedule Meeting -->
+          <a href="https://solvytech.com/#contact" class="link-tile link-tile-highlight" target="_blank" rel="noopener">
+            <div class="link-left">
+              <div class="link-icon-circle highlight-icon">
+                <i class="fas fa-calendar-check"></i>
+              </div>
+              <div class="link-text-block">
+                <span class="link-title">Consultation IT Gratuite</span>
+                <span class="link-sub">Planifier un échange de projet</span>
+              </div>
+            </div>
+            <i class="fas fa-arrow-right link-arrow-icon"></i>
+          </a>
+        </section>
+
+        <!-- Primary Action: Save Contact (vCard) -->
+        <div class="cta-container">
+          <a href="Cherfaoui-Benacer.vcf" download id="download-button" class="btn-primary btn-glow" role="button">
+            <i class="fas fa-user-plus btn-icon"></i>
+            <span>Enregistrer dans les contacts</span>
+          </a>
+
+          <button id="btn-open-share" class="btn-secondary">
+            <i class="fas fa-qrcode"></i>
+            <span>Partager / QR Code</span>
+          </button>
+        </div>
+
+        <!-- Solvytech Footer Branding -->
+        <footer class="footer-brand">
+          <a href="https://solvytech.com" target="_blank" rel="noopener" class="footer-logo-link" title="Visiter Solvytech">
+            <!-- Vector Logo: switches cleanly according to theme -->
+            <img src="solvytech-logo-white.svg" alt="Solvytech" class="company-logo logo-dark" height="28">
+            <img src="solvytech-logo-colored.svg" alt="Solvytech" class="company-logo logo-light" height="28">
+          </a>
+          <p class="footer-tagline">Cabinet de Conseil IT, Cloud &amp; Infogérance</p>
+          <div class="footer-location">
+            <i class="fas fa-shield-halved"></i>
+            <span>Casablanca • Maroc</span>
+          </div>
+        </footer>
+      </div>
+    </article>
+  </main>
+
+  <!-- Interactive JavaScript -->
   <script src="script.js"></script>
 </body>
 </html>
