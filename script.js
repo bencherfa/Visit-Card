@@ -1,3 +1,16 @@
-document.getElementById("download-button").addEventListener("click", function() {
-    alert("Votre carte de visite a été ajoutée aux contacts !");
+document.addEventListener("DOMContentLoaded", () => {
+  const downloadBtn = document.getElementById("download-button");
+  const toast = document.getElementById("toast");
+
+  if (downloadBtn) {
+    downloadBtn.addEventListener("click", () => {
+      // Affichage du toast sans bloquer l'interaction
+      if (toast) {
+        toast.classList.add("show");
+        setTimeout(() => {
+          toast.classList.remove("show");
+        }, 3200);
+      }
+    });
+  }
 });
